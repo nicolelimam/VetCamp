@@ -9,6 +9,9 @@ import dto.adm_cadusuarioDTO;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import view.adm_telaprincipalVIEW;
+import view.atn_telaprincipalVIEW;
+import view.vet_telaprincipalVIEW;
 
 /**
  *
@@ -36,8 +39,10 @@ public class LoginVIEW extends javax.swing.JFrame {
     private void initComponents() {
 
         btnEntrar = new javax.swing.JButton();
-        txtSenha = new javax.swing.JTextField();
+        jpSenha = new javax.swing.JPasswordField();
         txtUsuario = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -53,16 +58,18 @@ public class LoginVIEW extends javax.swing.JFrame {
                 btnEntrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, 240, 60));
+        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 150, 50));
+        getContentPane().add(jpSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 280, 40));
+        getContentPane().add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 280, 40));
 
-        txtSenha.setBackground(new java.awt.Color(255, 255, 255));
-        txtSenha.setBorder(null);
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 280, 40));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Usuário:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, 20));
 
-        txtUsuario.setBackground(new java.awt.Color(255, 255, 255));
-        txtUsuario.setBorder(null);
-        getContentPane().add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 280, 40));
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Senha:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, -1, -1));
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -114,7 +121,9 @@ public class LoginVIEW extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JButton btnEntrar;
-    private javax.swing.JTextField txtSenha;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPasswordField jpSenha;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 
@@ -125,7 +134,7 @@ public class LoginVIEW extends javax.swing.JFrame {
             String nome, senha;
 
             nome = txtUsuario.getText();
-            senha = txtSenha.getText();
+            senha = jpSenha.getText();
 
             adm_cadusuarioDTO obj = new adm_cadusuarioDTO();
             obj.setUsuario(nome);
@@ -161,7 +170,7 @@ public class LoginVIEW extends javax.swing.JFrame {
                 }
 
                 txtUsuario.setText("");
-                txtUsuario.setText("");
+                jpSenha.setText("");
 
                 dispose();
 
