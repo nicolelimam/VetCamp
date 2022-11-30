@@ -46,7 +46,7 @@ public class LoginVIEW extends javax.swing.JFrame {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle(" ");
+        setTitle("Login");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -89,7 +89,7 @@ public class LoginVIEW extends javax.swing.JFrame {
         jLabel2.setText("Senha:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, -1, -1));
 
-        background.setIcon(new javax.swing.ImageIcon("/home/linguini/Downloads/Group 12 (1).png")); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Group 12 (1).png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 500));
 
         pack();
