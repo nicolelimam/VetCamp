@@ -1,7 +1,7 @@
 
 package dto;
 
-
+// Classe criada para trabalhar com as variáveis através de set e getters
 public class vet_atendimentoDTO {
     
     private String nome;
@@ -16,14 +16,15 @@ public class vet_atendimentoDTO {
      * @return the nome
      */
     public String getNome() {
-        return nome;
+        return nome;// Ele retorna o valor que foi coletado pela variável local Nome.
     }
 
     /**
      * @param nome the nome to set
      */
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(String nome) {// ele está esperando o valor da variável Nome.
+        this.nome = nome;//armazenando na variável local Nome.
+        
     }
 
     /**

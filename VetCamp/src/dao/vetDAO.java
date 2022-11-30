@@ -16,9 +16,9 @@ public class vetDAO {
     Connection conn;
     PreparedStatement pstm;
     ResultSet rs;
-    
     ArrayList<vet_atendimentoDTO> listahc = new ArrayList<>();
     
+    // método para inserir os valores da tabelaFicha
     public void cadFicha(vet_atendimentoDTO objatendimento) {
 
         String sql = "insert into vet_ficha (nome_ficha, idade_ficha, sexo_ficha, categoria_ficha, descricao_ficha, prescricao_ficha) values (?,?,?,?,?,?)";
@@ -44,7 +44,7 @@ public class vetDAO {
         }
 
     }
-   
+   // Está trazendo os registros do banco de dados para a tabela de consulta
     public ArrayList<vet_atendimentoDTO> pesquisarConsulta() {
 
         vet_consultaFichaVIEW objvetconsulta = new vet_consultaFichaVIEW();
