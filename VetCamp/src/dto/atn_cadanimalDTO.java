@@ -16,6 +16,7 @@ public class atn_cadanimalDTO {
     /**
      * @return the nome
      */
+    /*São geters e seters para trabalhar com as variáveis, o get retorna o valor que foi coletado pela variável local, e o set espera um parâmetro e armazena na variável local*/
     public String getNome() {
         return nome;
     }

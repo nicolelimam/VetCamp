@@ -15,15 +15,16 @@ import view.vet_consultaFichaVIEW;
 
 public class atnDAO {
 
-    Connection conn;
-    PreparedStatement pstm;
-    ResultSet rs;
+    Connection conn;/*Trabalhar com a variavél connection*/
+    PreparedStatement pstm;/*Ela prepara a conexão*/
+    ResultSet rs;/*O rs trabalha com ResultSet trazendo informaçõ do banco de dados*/
+    /*o ArrayList é uma classe genérica que prepara uma lista de informações do banco de dados*/
     ArrayList<atn_cadclienteDTO> lista = new ArrayList<>();
     ArrayList<atn_cadanimalDTO> listaa = new ArrayList<>();
     ArrayList<atn_agendaDTO> listag = new ArrayList<>();
     ArrayList<adm_cadprodutoDTO> listaRe = new ArrayList<>();
     
-
+    /*É um metodo que faz a inserção de dados na tabela atn_cliente*/
     public void cadclienteDAO(atn_cadclienteDTO objcadcliente) {
 
         String sql = "insert into atn_cliente (nome_cliente, cpf_cliente, endereco_cliente, telefone_cliente) values (?,?,?,?)";
@@ -47,7 +48,7 @@ public class atnDAO {
         }
 
     }
-
+    /*Esse método ele faz uma lista de registros da tabela atn_cliente*/
     public ArrayList<atn_cadclienteDTO> pesquisarCliente() {
 
         String sql = "SELECT * FROM atn_cliente";
@@ -79,7 +80,7 @@ public class atnDAO {
         return lista;
 
     }
-
+    /*É um método que altera informações da tabela atn_cliente*/
     public void alterarCliente(atn_cadclienteDTO objcadclientedto) {
 
         String sql = "UPDATE atn_cliente SET nome_cliente = ?, cpf_cliente = ? , endereco_cliente = ?, telefone_cliente = ? where id_cliente = ?";
@@ -106,7 +107,7 @@ public class atnDAO {
         }
 
     }
-
+    /*É um método que deleta um registro da tabela atn_cliente*/
     public void deletarCliente(atn_cadclienteDTO objcadclientedto) {
 
         String sql = "DELETE FROM atn_cliente where id_cliente = ?";
@@ -133,6 +134,7 @@ public class atnDAO {
     }
 
     //-----
+    /*É um método que traz a informações dos clientes através do ResultSet*/
     public ResultSet listarCliente() {
 
         conn = new conexaoDAO().conectaBD();
@@ -151,7 +153,7 @@ public class atnDAO {
         }
 
     }
-
+    /*É um método que traz a informações das categorias através do ResultSet*/
     public ResultSet listarCategoria() {
 
         conn = new conexaoDAO().conectaBD();
@@ -170,7 +172,7 @@ public class atnDAO {
         }
 
     }
-
+    /*É um metodo que faz a inserção de dados na tabela atn_animal*/
     public void cadAnimalDAO(atn_cadanimalDTO objcadanimaldto) {
 
         String sql = "insert into atn_animal (nome_animal, idade_animal, sexo_animal, descricao_animal, categoria_animal, fk_cliente) values (?,?,?,?,?,?)";
@@ -196,7 +198,7 @@ public class atnDAO {
         }
 
     }
-
+    /*O ArrayList é uma classe genérica que prepara uma lista de informações dos animais*/
     public ArrayList<atn_cadanimalDTO> pesquisarAnimais() {
 
         String sql = "SELECT * FROM atn_animal";
@@ -230,7 +232,7 @@ public class atnDAO {
         return listaa;
 
     }
-
+    /*É um método que altera informações da tabela atn_animal*/
     public void alterarAnimal(atn_cadanimalDTO objcadanimaldto) {
 
         String sql = "UPDATE atn_animal SET nome_animal = ?, idade_animal = ? , sexo_animal = ?, descricao_animal = ?, fk_cliente = ?, categoria_animal = ? where id_animal = ?";
@@ -259,7 +261,7 @@ public class atnDAO {
         }
 
     }
-
+    /*É um método que deleta um registro da tabela atn_animal*/
     public void deletarAnimal(atn_cadanimalDTO objcadanimaldto) {
 
         String sql = "DELETE FROM atn_animal where id_animal = ?";
@@ -284,7 +286,7 @@ public class atnDAO {
         }
 
     }
-
+    /*É um metodo que faz a inserção de dados na tabela atn_agenda*/
     public void agendaDAO(atn_agendaDTO objagenda) {
 
         String sql = "insert into atn_agenda (data_agenda, tipo_agenda, sexo_agenda, categoria_agenda, descricao_agenda, nome_animal, fk_animal, vet_agenda) values (?,?,?,?,?,?,?,?)";
@@ -312,7 +314,7 @@ public class atnDAO {
         }
 
     }
-
+    /*O ArrayList é uma classe genérica que prepara uma lista de informações da agenda*/
     public ArrayList<atn_agendaDTO> pesquisarAgenda() {
 
         String sql = "SELECT * FROM atn_agenda";
@@ -348,7 +350,7 @@ public class atnDAO {
         return listag;
 
     }
-
+    /*É um método que altera informações da tabela atn_agenda*/
     public void alterarAgenda(atn_agendaDTO objagenda) {
 
         String sql = "UPDATE atn_agenda SET data_agenda = ?, tipo_agenda = ? where id_agenda = ?";
@@ -373,7 +375,7 @@ public class atnDAO {
         }
 
     }
-
+    /*O ArrayList é uma classe genérica que prepara uma lista de informações dos produtos*/
     public ArrayList<adm_cadprodutoDTO> relatorioVendas() {
 
         conn = new conexaoDAO().conectaBD();

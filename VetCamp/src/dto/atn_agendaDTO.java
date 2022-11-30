@@ -20,6 +20,7 @@ public class atn_agendaDTO {
     /**
      * @return the data_agenda
      */
+    /*São geters e seters para trabalhar com as variáveis, o get retorna o valor que foi coletado pela variável local, e o set espera um parâmetro e armazena na variável local*/
     public String getData_agenda() {
         return data_agenda;
     }
