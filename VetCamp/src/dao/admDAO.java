@@ -13,9 +13,11 @@ import javax.swing.JOptionPane;
 
 public class admDAO {
 
-    Connection conn;
-    PreparedStatement pstm;
-    ResultSet rs;
+    Connection conn;/*Trabalhar com a variavél connection*/
+    PreparedStatement pstm;/*Ela prepara a conexão*/
+    ResultSet rs;/*O rs trabalha com ResultSet trazendo informaçõ do banco de dados*/
+    
+    /*o ArrayList é uma classe genérica que prepara uma lista de informações do banco de dados*/
     ArrayList<adm_cadusuarioDTO> lista = new ArrayList<>();
     ArrayList<adm_cadfornecedorDTO> listaf = new ArrayList<>();
     ArrayList<adm_cadprodutoDTO> listap = new ArrayList<>();
@@ -23,6 +25,7 @@ public class admDAO {
     ArrayList<adm_cadprodutoDTO> listaes = new ArrayList<>();
     ArrayList<adm_controlDTO> listac = new ArrayList<>();
     
+    /*É um metodo que faz a inserção de dados do cadastro do usuário na tabela adm_usuario*/
     public void cadusuarioDAO(adm_cadusuarioDTO objcadusuariodto) {
 
         String sql = "insert into adm_usuario (nome_usuario, cpf_usuario, endereco_usuario, telefone_usuario, login_usuario, login_senha, fk_cargo) values (?,?,?,?,?,?,?)";
@@ -49,7 +52,8 @@ public class admDAO {
         }
 
     }
-
+    
+    /*É um método que traz a informações dos cargos através do ResultSet*/
     public ResultSet listarCargo() {
 
         conn = new conexaoDAO().conectaBD();
@@ -69,6 +73,7 @@ public class admDAO {
 
     }
     
+    /*O ArrayList é uma classe genérica que prepara uma lista de informações do usuário cadastrado*/
     public ArrayList<adm_cadusuarioDTO> pesquisarUsuario(){
         
         String sql = "SELECT * FROM adm_usuario";
@@ -104,6 +109,7 @@ public class admDAO {
         
     }
     
+    /*É um método que altera informações da tabela adm_usuario*/
     public void alterarUsuario(adm_cadusuarioDTO objcadusuariodto){
         
         String sql = "UPDATE adm_usuario SET nome_usuario = ?, cpf_usuario = ? , endereco_usuario = ?, telefone_usuario = ?, login_usuario = ?, login_senha = ?, fk_cargo = ? where id_usuario = ?";
@@ -135,6 +141,7 @@ public class admDAO {
     
     }
     
+    /*É um método que deleta um registro da tabela adm_usuario*/
     public void deletarUsuario(adm_cadusuarioDTO objcadusuariodto){
         
         String sql = "DELETE FROM adm_usuario where id_usuario = ?";
@@ -162,7 +169,7 @@ public class admDAO {
     
     //-----
     
-    
+    /*É um metodo que faz a inserção de dados do cadastro do fornecedor na tabela adm_fornecedor*/
     public void cadfornecedorDAO(adm_cadfornecedorDTO objcadfornecedordto) {
 
         String sql = "insert into adm_fornecedor (nome_fornecedor, cnpj_fornecedor, endereco_fornecedor, telefone_fornecedor, email_fornecedor) values (?,?,?,?,?)";
@@ -188,6 +195,7 @@ public class admDAO {
 
     }
     
+    /*O ArrayList é uma classe genérica que prepara uma lista de informações do fornecedor cadastrado*/
     public ArrayList<adm_cadfornecedorDTO> pesquisarFornecedor(){
         
         String sql = "SELECT * FROM adm_fornecedor";
@@ -221,6 +229,7 @@ public class admDAO {
         
     }
     
+    /*É um método que altera informações da tabela adm_fornecedor*/
     public void alterarFornecedor(adm_cadfornecedorDTO objcadfonecedordto){
         
         String sql = "UPDATE adm_fornecedor SET nome_fornecedor = ?, cnpj_fornecedor = ? , endereco_fornecedor = ?, telefone_fornecedor = ?, email_fornecedor = ? where id_fornecedor = ?";
@@ -250,6 +259,7 @@ public class admDAO {
     
     }
     
+    /*É um método que deleta um registro da tabela adm_fornecedor*/
     public void deletarFornecedor(adm_cadfornecedorDTO objcadfornecedordto){
         
         String sql = "DELETE FROM adm_fornecedor where id_fornecedor = ?";
@@ -277,6 +287,7 @@ public class admDAO {
     
     //-----
     
+    /*É um metodo que faz a inserção de dados do cadastro do produto na tabela adm_produto*/
     public void cadprodutoDAO(adm_cadprodutoDTO objcadprodutodto) {
 
         String sql = "insert into adm_produto (nome_produto, quantidade_produto, validade_produto, preco_unitario, preco_venda, fk_fornecedor) values (?,?,?,?,?,?)";
@@ -318,7 +329,7 @@ public class admDAO {
     }
     
     
-    
+    /*É um método que traz a informações do fornecedor através do ResultSet*/
     public ResultSet listarFornecedor() {
 
         conn = new conexaoDAO().conectaBD();
@@ -338,6 +349,7 @@ public class admDAO {
 
     }
     
+    /*O ArrayList é uma classe genérica que prepara uma lista de informações do produto cadastrado*/
     public ArrayList<adm_cadprodutoDTO> pesquisarProduto(){
         
         String sql = "SELECT * FROM adm_produto";
@@ -372,6 +384,7 @@ public class admDAO {
         
     }
     
+    /*O ArrayList é uma classe genérica que prepara uma lista de informações do estoque*/
     public ArrayList<adm_cadprodutoDTO> pesquisarEstoque(){
         
         String sql = "SELECT data_est, produto_est, quantidade FROM adm_est";
@@ -403,6 +416,7 @@ public class admDAO {
         
     }
     
+    /*O ArrayList é uma classe genérica que prepara uma lista de informações de estoque(saída)*/
     public ArrayList<adm_cadprodutoDTO> pesquisarEstoqueSaida(){
         
         String sql = "SELECT data_est, prod_est, quant_est FROM adm_estsaida";
@@ -434,6 +448,7 @@ public class admDAO {
         
     }
     
+    /*É um método que altera informações da tabela adm_produto*/
     public void alterarProduto(adm_cadprodutoDTO objcadprodutodto){
         
         String sql = "UPDATE adm_produto SET nome_produto = ?, quantidade_produto = ? , validade_produto = ?, preco_unitario = ?, preco_venda = ?, fk_fornecedor = ? where id_produto = ?";
@@ -465,6 +480,7 @@ public class admDAO {
     
     }
     
+    /*É um método que deleta um registro da tabela adm_produto*/
     public void deletarProduto(adm_cadprodutoDTO objcadprodutodto){
         
         String sql = "DELETE FROM adm_produto where id_produto = ?";
@@ -490,6 +506,7 @@ public class admDAO {
         
     }
     
+    /*O ArrayList é uma classe genérica que prepara uma lista de informações de controle de caixa*/
     public ArrayList<adm_controlDTO> pesquisarControl(){
         
         String sql = "SELECT data_control, tipo_control, descricao_control, valor_control, funcionario_control FROM adm_control";

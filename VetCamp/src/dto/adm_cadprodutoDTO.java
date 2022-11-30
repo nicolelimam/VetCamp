@@ -14,6 +14,8 @@ public class adm_cadprodutoDTO {
     /**
      * @return the id_produto
      */
+    
+    /*São getters e setters para trabalhar com as variáveis, o get retorna o valor que foi coletado pela variável local, e o set espera um parâmetro e armazena na variável local*/
     public int getId_produto() {
         return id_produto;
     }

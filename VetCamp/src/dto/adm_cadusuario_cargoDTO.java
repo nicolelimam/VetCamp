@@ -10,6 +10,8 @@ private String descricao;
     /**
      * @return the id_cargo
      */
+
+    /*São getters e setters para trabalhar com as variáveis, o get retorna o valor que foi coletado pela variável local, e o set espera um parâmetro e armazena na variável local*/
     public int getId_cargo() {
         return id_cargo;
     }
