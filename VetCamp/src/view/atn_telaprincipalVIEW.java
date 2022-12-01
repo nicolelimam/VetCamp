@@ -45,6 +45,7 @@ public class atn_telaprincipalVIEW extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 570));
 
         MenuPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        MenuPrincipal.setForeground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setPreferredSize(new java.awt.Dimension(500, 30));
 
         jMenu1.setText("Cadastro");

@@ -61,23 +61,27 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         setFont(new java.awt.Font("AcadEref", 0, 10)); // NOI18N
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel_dados.setBackground(new java.awt.Color(255, 251, 251));
-        jPanel_dados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12))); // NOI18N
+        jPanel_dados.setBackground(new java.awt.Color(204, 255, 102));
+        jPanel_dados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12))); // NOI18N
         jPanel_dados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Nome:");
         jPanel_dados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("CPF:");
         jPanel_dados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Endereço:");
         jPanel_dados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Telefone:");
         jPanel_dados.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
         jPanel_dados.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 250, 30));
@@ -110,6 +114,7 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tabelaCliente);
         if (tabelaCliente.getColumnModel().getColumnCount() > 0) {
             tabelaCliente.getColumnModel().getColumn(0).setResizable(false);
+            tabelaCliente.getColumnModel().getColumn(0).setPreferredWidth(2);
             tabelaCliente.getColumnModel().getColumn(1).setResizable(false);
             tabelaCliente.getColumnModel().getColumn(2).setResizable(false);
             tabelaCliente.getColumnModel().getColumn(3).setResizable(false);
@@ -142,8 +147,9 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, 80, 35));
 
-        btnAlterar.setBackground(new java.awt.Color(255, 255, 255));
+        btnAlterar.setBackground(new java.awt.Color(241, 255, 129));
         btnAlterar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnAlterar.setForeground(new java.awt.Color(0, 0, 0));
         btnAlterar.setText("Editar");
         btnAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,18 +158,20 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 80, 35));
 
-        btncarregarCampo.setBackground(new java.awt.Color(255, 255, 255));
+        btncarregarCampo.setBackground(new java.awt.Color(241, 255, 129));
         btncarregarCampo.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btncarregarCampo.setForeground(new java.awt.Color(0, 0, 0));
         btncarregarCampo.setText("Carregar Campos");
         btncarregarCampo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncarregarCampoActionPerformed(evt);
             }
         });
-        getContentPane().add(btncarregarCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 520, 140, 35));
+        getContentPane().add(btncarregarCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 520, 160, 35));
 
-        btnLimpar.setBackground(new java.awt.Color(255, 255, 255));
+        btnLimpar.setBackground(new java.awt.Color(241, 255, 129));
         btnLimpar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,8 +180,9 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 80, 35));
 
-        btnSair.setBackground(new java.awt.Color(255, 255, 255));
+        btnSair.setBackground(new java.awt.Color(241, 255, 129));
         btnSair.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnSair.setForeground(new java.awt.Color(0, 0, 0));
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,6 +190,8 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 450, 80, 35));
+
+        jLabel_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
         getContentPane().add(jLabel_background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
         pack();

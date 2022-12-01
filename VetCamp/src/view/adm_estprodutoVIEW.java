@@ -95,15 +95,18 @@ public class adm_estprodutoVIEW extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, 230));
 
         jLabel_Saida.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jLabel_Saida.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Saida.setText("Saída");
         getContentPane().add(jLabel_Saida, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, -1, -1));
 
         jLabel_Entrada.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jLabel_Entrada.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Entrada.setText("Estoque");
         getContentPane().add(jLabel_Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
-        btnProd.setBackground(new java.awt.Color(255, 255, 255));
+        btnProd.setBackground(new java.awt.Color(241, 255, 129));
         btnProd.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnProd.setForeground(new java.awt.Color(0, 0, 0));
         btnProd.setText("Adicionar Prod.");
         btnProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,10 +145,11 @@ public class adm_estprodutoVIEW extends javax.swing.JFrame {
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 920, 180));
 
         jLabel_Entrada1.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jLabel_Entrada1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Entrada1.setText("Entrada");
         getContentPane().add(jLabel_Entrada1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/template3.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
         pack();

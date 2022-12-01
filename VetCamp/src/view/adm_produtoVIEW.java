@@ -64,7 +64,7 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         jLabel_Data.setText("Data:");
         getContentPane().add(jLabel_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
-        btnAdd.setBackground(new java.awt.Color(255, 255, 255));
+        btnAdd.setBackground(new java.awt.Color(241, 255, 129));
         btnAdd.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         btnAdd.setForeground(new java.awt.Color(0, 0, 0));
         btnAdd.setText("Adicionar");
@@ -106,7 +106,7 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         getContentPane().add(txtCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 100, 30));
         getContentPane().add(txtProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 140, 30));
 
-        btnLimpar.setBackground(new java.awt.Color(255, 255, 255));
+        btnLimpar.setBackground(new java.awt.Color(241, 255, 129));
         btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpar.setText("Limpar");
@@ -117,7 +117,7 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 100, 30));
 
-        btnVoltar.setBackground(new java.awt.Color(255, 255, 255));
+        btnVoltar.setBackground(new java.awt.Color(241, 255, 129));
         btnVoltar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         btnVoltar.setForeground(new java.awt.Color(0, 0, 0));
         btnVoltar.setText("Voltar");
@@ -128,7 +128,7 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 100, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/template3.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 270));
 
         pack();

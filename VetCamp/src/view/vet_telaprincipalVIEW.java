@@ -9,9 +9,11 @@ import dao.conexaoDAO;
 import dao.vetDAO;
 import dto.atn_agendaDTO;
 import dto.vet_atendimentoDTO;
+import java.awt.HeadlessException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -78,68 +80,81 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panelFicha.setBackground(new java.awt.Color(204, 204, 255));
+        panelFicha.setBackground(new java.awt.Color(204, 255, 102));
         panelFicha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        panelFicha.setForeground(new java.awt.Color(204, 204, 255));
+        panelFicha.setForeground(new java.awt.Color(0, 0, 0));
         panelFicha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelFicha.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 260, 30));
+        panelFicha.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 260, 30));
 
         jLabelNome.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabelNome.setForeground(new java.awt.Color(51, 51, 51));
+        jLabelNome.setForeground(new java.awt.Color(0, 0, 0));
         jLabelNome.setText("Nome:");
-        panelFicha.add(jLabelNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
-        panelFicha.add(txtIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 120, 30));
+        panelFicha.add(jLabelNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
+        panelFicha.add(txtIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 120, 30));
 
-        jLabelIdade.setForeground(new java.awt.Color(51, 51, 51));
-        jLabelIdade.setText("Idade");
-        panelFicha.add(jLabelIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+        jLabelIdade.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabelIdade.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelIdade.setText("Idade:");
+        panelFicha.add(jLabelIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
 
-        jLabelSexo.setForeground(new java.awt.Color(51, 51, 51));
-        jLabelSexo.setText("Sexo");
-        panelFicha.add(jLabelSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, -1, -1));
-        panelFicha.add(txtSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 120, 30));
-        panelFicha.add(txtCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 160, 30));
+        jLabelSexo.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabelSexo.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelSexo.setText("Sexo:");
+        panelFicha.add(jLabelSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, -1, -1));
+        panelFicha.add(txtSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 120, 30));
+        panelFicha.add(txtCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 260, 30));
 
-        jLabelCategoria.setForeground(new java.awt.Color(51, 51, 51));
-        jLabelCategoria.setText("Categoria");
-        panelFicha.add(jLabelCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+        jLabelCategoria.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabelCategoria.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelCategoria.setText("Categoria:");
+        panelFicha.add(jLabelCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
-        jLabelDescricao.setForeground(new java.awt.Color(51, 51, 51));
-        jLabelDescricao.setText("Descrição");
-        panelFicha.add(jLabelDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
-        panelFicha.add(txtDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 260, 30));
+        jLabelDescricao.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabelDescricao.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelDescricao.setText("Descrição:");
+        panelFicha.add(jLabelDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
+        panelFicha.add(txtDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 260, 30));
 
         txtPrescricao.setColumns(20);
         txtPrescricao.setRows(5);
         jScrollPane2.setViewportView(txtPrescricao);
 
-        panelFicha.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 320, 190));
+        panelFicha.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 340, 190));
 
+        btnFinalizar.setBackground(new java.awt.Color(241, 255, 129));
+        btnFinalizar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnFinalizar.setForeground(new java.awt.Color(0, 0, 0));
         btnFinalizar.setText("Finalizar");
         btnFinalizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFinalizarActionPerformed(evt);
             }
         });
-        panelFicha.add(btnFinalizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, 80, 35));
+        panelFicha.add(btnFinalizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 240, 90, 35));
 
+        btnLimpar.setBackground(new java.awt.Color(241, 255, 129));
+        btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimparActionPerformed(evt);
             }
         });
-        panelFicha.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, 80, 35));
+        panelFicha.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 90, 35));
 
-        btnCancelar.setText("Cencelar");
+        btnCancelar.setBackground(new java.awt.Color(241, 255, 129));
+        btnCancelar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(0, 0, 0));
+        btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarActionPerformed(evt);
             }
         });
-        panelFicha.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 80, 35));
+        panelFicha.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, 100, 35));
 
-        getContentPane().add(panelFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 760, 310));
+        getContentPane().add(panelFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 760, 310));
 
         tabelaAtendimento.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -158,22 +173,41 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(tabelaAtendimento);
+        if (tabelaAtendimento.getColumnModel().getColumnCount() > 0) {
+            tabelaAtendimento.getColumnModel().getColumn(0).setResizable(false);
+            tabelaAtendimento.getColumnModel().getColumn(0).setPreferredWidth(2);
+            tabelaAtendimento.getColumnModel().getColumn(1).setResizable(false);
+            tabelaAtendimento.getColumnModel().getColumn(2).setResizable(false);
+            tabelaAtendimento.getColumnModel().getColumn(3).setResizable(false);
+            tabelaAtendimento.getColumnModel().getColumn(4).setResizable(false);
+            tabelaAtendimento.getColumnModel().getColumn(5).setResizable(false);
+            tabelaAtendimento.getColumnModel().getColumn(6).setResizable(false);
+            tabelaAtendimento.getColumnModel().getColumn(7).setResizable(false);
+            tabelaAtendimento.getColumnModel().getColumn(8).setResizable(false);
+        }
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 940, 170));
 
-        btnFicha.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnFicha.setText("Abrir FIcha");
+        btnFicha.setBackground(new java.awt.Color(241, 255, 129));
+        btnFicha.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
+        btnFicha.setForeground(new java.awt.Color(0, 0, 0));
+        btnFicha.setText("Abrir Ficha");
         btnFicha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFichaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 220, 150, 50));
+        getContentPane().add(btnFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 220, 150, 50));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/template66.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 570));
 
+        MenuPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        MenuPrincipal.setForeground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setPreferredSize(new java.awt.Dimension(500, 30));
 
         jMConsulta.setText("Consulta");
+        jMConsulta.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         jMConsulta.setPreferredSize(new java.awt.Dimension(100, 19));
 
         jmHistAnimais.setText("Histórico de Animais");
@@ -187,6 +221,7 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
         MenuPrincipal.add(jMConsulta);
 
         jMSair.setText("Sair");
+        jMSair.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         jMSair.setPreferredSize(new java.awt.Dimension(100, 19));
         jMSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -261,7 +296,7 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
                 txtDescricao.setText(descricao.trim());
             }
 
-        } catch (Exception e) {
+        } catch (HeadlessException | SQLException e) {
             JOptionPane.showMessageDialog(null, "vet_telaprincipal: " + e);
         }
 
