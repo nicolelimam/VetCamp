@@ -39,7 +39,6 @@ public class adm_cadusuarioVIEW extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel_cadusuario = new javax.swing.JLabel();
         jPanel_dados = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -52,11 +51,13 @@ public class adm_cadusuarioVIEW extends javax.swing.JFrame {
         txtTelefone = new javax.swing.JTextField();
         cbxCargo = new javax.swing.JComboBox<>();
         txtId = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
         jPanel_login = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         txtSenha = new javax.swing.JPasswordField();
+        jLabel9 = new javax.swing.JLabel();
         btnCadastrar = new javax.swing.JButton();
         btncarregarCampo = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -68,83 +69,103 @@ public class adm_cadusuarioVIEW extends javax.swing.JFrame {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle(" ");
+        setTitle(" Cadastro de Usuário");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel_cadusuario.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
-        jLabel_cadusuario.setForeground(new java.awt.Color(244, 249, 252));
-        jLabel_cadusuario.setText("Cadastro de Usuário");
-        getContentPane().add(jLabel_cadusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, -1, 40));
-
-        jPanel_dados.setBackground(new java.awt.Color(255, 251, 251));
-        jPanel_dados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)), "Dados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(51, 51, 51))); // NOI18N
+        jPanel_dados.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel_dados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(51, 51, 51))); // NOI18N
         jPanel_dados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel1.setText("Nome");
+        jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Nome:");
         jPanel_dados.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
-        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel2.setText("Cpf");
-        jPanel_dados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("CPF:");
+        jPanel_dados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
-        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel3.setText("Endereço");
-        jPanel_dados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Endereço:");
+        jPanel_dados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
-        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel4.setText("Telefone");
-        jPanel_dados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Telefone:");
+        jPanel_dados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
 
-        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel5.setText("Cargo");
-        jPanel_dados.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
-        jPanel_dados.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 250, 25));
-        jPanel_dados.add(txtCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 250, 25));
-        jPanel_dados.add(txtEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 250, 25));
-        jPanel_dados.add(txtTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 250, 25));
+        jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Cargo:");
+        jPanel_dados.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
+        jPanel_dados.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 250, 30));
+        jPanel_dados.add(txtCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 250, 30));
+        jPanel_dados.add(txtEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 250, 30));
+        jPanel_dados.add(txtTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 250, 30));
 
+        cbxCargo.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         cbxCargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione" }));
-        jPanel_dados.add(cbxCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 130, 25));
+        jPanel_dados.add(cbxCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 130, 30));
 
         txtId.setEditable(false);
         txtId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel_dados.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 40, -1));
 
-        getContentPane().add(jPanel_dados, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 300, 290));
+        jLabel8.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("CADASTRO");
+        jPanel_dados.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
 
-        jPanel_login.setBackground(new java.awt.Color(255, 251, 251));
-        jPanel_login.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)), "Login", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(51, 51, 51))); // NOI18N
+        getContentPane().add(jPanel_dados, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 300, 350));
+
+        jPanel_login.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel_login.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel_login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel6.setText("Usuario");
+        jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Usuario:");
         jPanel_login.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
-        jPanel_login.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 250, 25));
+        jPanel_login.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 250, 30));
 
-        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel7.setText("Senha");
-        jPanel_login.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
-        jPanel_login.add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 250, 25));
+        jLabel7.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Senha:");
+        jPanel_login.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
+        jPanel_login.add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 250, 30));
 
-        getContentPane().add(jPanel_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 300, 140));
+        jLabel9.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("LOGIN");
+        jPanel_login.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, -1));
 
+        getContentPane().add(jPanel_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 300, 170));
+
+        btnCadastrar.setBackground(new java.awt.Color(153, 255, 153));
+        btnCadastrar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnCadastrar.setForeground(new java.awt.Color(0, 0, 0));
         btnCadastrar.setText("Salvar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadastrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 90, 35));
+        getContentPane().add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 480, 90, 35));
 
+        btncarregarCampo.setBackground(new java.awt.Color(255, 255, 255));
+        btncarregarCampo.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btncarregarCampo.setForeground(new java.awt.Color(0, 0, 0));
         btncarregarCampo.setText("Carregar Campos");
         btncarregarCampo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncarregarCampoActionPerformed(evt);
             }
         });
-        getContentPane().add(btncarregarCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(805, 520, -1, 35));
+        getContentPane().add(btncarregarCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 480, -1, 35));
 
+        tabelaUsuario.setBackground(new java.awt.Color(255, 255, 255));
         tabelaUsuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -162,44 +183,60 @@ public class adm_cadusuarioVIEW extends javax.swing.JFrame {
             }
         });
         jScrollPane2.setViewportView(tabelaUsuario);
+        if (tabelaUsuario.getColumnModel().getColumnCount() > 0) {
+            tabelaUsuario.getColumnModel().getColumn(0).setPreferredWidth(20);
+        }
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, 580, 430));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, 580, 430));
 
+        btnAlterar.setBackground(new java.awt.Color(255, 255, 255));
+        btnAlterar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnAlterar.setForeground(new java.awt.Color(0, 0, 0));
         btnAlterar.setText("Editar");
         btnAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAlterarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 520, 90, 35));
+        getContentPane().add(btnAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 530, 90, 35));
 
+        btnExcluir.setBackground(new java.awt.Color(255, 102, 102));
+        btnExcluir.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnExcluir.setForeground(new java.awt.Color(255, 255, 255));
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExcluirActionPerformed(evt);
             }
         });
-        getContentPane().add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 520, 90, 35));
+        getContentPane().add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 480, 90, 35));
 
+        btnLimpar.setBackground(new java.awt.Color(255, 255, 255));
+        btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimparActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 90, 35));
+        getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 530, 90, 35));
 
+        btnSair.setBackground(new java.awt.Color(255, 255, 255));
+        btnSair.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnSair.setForeground(new java.awt.Color(0, 0, 0));
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSairActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 560, 90, 35));
+        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 530, 90, 35));
 
         background.setBackground(new java.awt.Color(255, 255, 255));
         background.setForeground(new java.awt.Color(51, 51, 51));
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/template2.png"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -286,7 +323,8 @@ public class adm_cadusuarioVIEW extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel_cadusuario;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel_dados;
     private javax.swing.JPanel jPanel_login;
     private javax.swing.JScrollPane jScrollPane2;

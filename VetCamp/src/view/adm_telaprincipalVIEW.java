@@ -61,14 +61,20 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
         jMenuBar3.add(jMenu6);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle(" ");
+        setTitle("Tela Principal");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/template66.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
+        MenuPrincipal.setBackground(new java.awt.Color(204, 204, 204));
+        MenuPrincipal.setForeground(new java.awt.Color(0, 0, 0));
+        MenuPrincipal.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         MenuPrincipal.setPreferredSize(new java.awt.Dimension(500, 30));
 
         jMCadastro.setText("Cadastro");
+        jMCadastro.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
         jMCadastro.setPreferredSize(new java.awt.Dimension(100, 19));
 
         jmFornecedor.setText("Fornecedor");
@@ -98,6 +104,7 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
         MenuPrincipal.add(jMCadastro);
 
         jMEstoque.setText("Estoque");
+        jMEstoque.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
         jMEstoque.setPreferredSize(new java.awt.Dimension(100, 19));
         jMEstoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +123,7 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
         MenuPrincipal.add(jMEstoque);
 
         jMFinanceiro.setText("Financeiro");
+        jMFinanceiro.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
         jMFinanceiro.setPreferredSize(new java.awt.Dimension(100, 19));
 
         jmControleCaixa.setText("Controle de Caixa");
@@ -129,6 +137,7 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
         MenuPrincipal.add(jMFinanceiro);
 
         jMRelatorio.setText("Relatórios");
+        jMRelatorio.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
         jMRelatorio.setPreferredSize(new java.awt.Dimension(100, 19));
 
         jmVendas.setText("Venda");
@@ -141,7 +150,10 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
 
         MenuPrincipal.add(jMRelatorio);
 
+        jMSair.setBackground(new java.awt.Color(204, 204, 204));
+        jMSair.setForeground(new java.awt.Color(0, 0, 0));
         jMSair.setText("Sair");
+        jMSair.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
         jMSair.setPreferredSize(new java.awt.Dimension(100, 19));
         jMSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

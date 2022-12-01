@@ -52,108 +52,84 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         txtProd = new javax.swing.JTextField();
         btnLimpar = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle(" ");
+        setTitle(" Produto");
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel_Data.setText("Data");
+        jLabel_Data.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel_Data.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Data.setText("Data:");
+        getContentPane().add(jLabel_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
+        btnAdd.setBackground(new java.awt.Color(255, 255, 255));
+        btnAdd.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(0, 0, 0));
         btnAdd.setText("Adicionar");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
+        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 100, 30));
 
-        jLabel_Produto.setText("Produto");
+        jLabel_Produto.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel_Produto.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Produto.setText("Produto:");
+        getContentPane().add(jLabel_Produto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 84, -1));
+        getContentPane().add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 100, 30));
 
-        jLabel_Quantidade.setText("Quantidade");
+        jLabel_Quantidade.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel_Quantidade.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Quantidade.setText("Quantidade:");
+        getContentPane().add(jLabel_Quantidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, -1));
 
         txtQntd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtQntdActionPerformed(evt);
             }
         });
+        getContentPane().add(txtQntd, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 100, 30));
 
-        jLabel_Cod.setText("Cod.Prod.");
+        jLabel_Cod.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel_Cod.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Cod.setText("Cod.Prod.:");
+        getContentPane().add(jLabel_Cod, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, -1));
 
         txtCod.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtCodKeyPressed(evt);
             }
         });
+        getContentPane().add(txtCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 100, 30));
+        getContentPane().add(txtProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 140, 30));
 
+        btnLimpar.setBackground(new java.awt.Color(255, 255, 255));
+        btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimparActionPerformed(evt);
             }
         });
+        getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 100, 30));
 
+        btnVoltar.setBackground(new java.awt.Color(255, 255, 255));
+        btnVoltar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnVoltar.setForeground(new java.awt.Color(0, 0, 0));
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 100, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel_Data))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_Cod)
-                            .addComponent(txtCod, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_Produto, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtProd, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_Quantidade)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtQntd, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_Produto)
-                    .addComponent(jLabel_Quantidade)
-                    .addComponent(jLabel_Cod)
-                    .addComponent(jLabel_Data, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtData, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
-                    .addComponent(txtCod)
-                    .addComponent(txtProd)
-                    .addComponent(txtQntd))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/template3.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 270));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -299,6 +275,7 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnVoltar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel_Cod;
     private javax.swing.JLabel jLabel_Data;
     private javax.swing.JLabel jLabel_Produto;

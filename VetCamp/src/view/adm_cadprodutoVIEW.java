@@ -39,7 +39,6 @@ public class adm_cadprodutoVIEW extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel_cadproduto = new javax.swing.JLabel();
         jPanel_dados = new javax.swing.JPanel();
         lblData = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -67,56 +66,59 @@ public class adm_cadprodutoVIEW extends javax.swing.JFrame {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle(" ");
+        setTitle("Cadastro de Produto");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel_cadproduto.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
-        jLabel_cadproduto.setForeground(new java.awt.Color(244, 249, 252));
-        jLabel_cadproduto.setText("Cadastro de Produto");
-        getContentPane().add(jLabel_cadproduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 10, -1, 40));
-
-        jPanel_dados.setBackground(new java.awt.Color(255, 251, 251));
-        jPanel_dados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)), "Dados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(51, 51, 51))); // NOI18N
+        jPanel_dados.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel_dados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel_dados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblData.setForeground(new java.awt.Color(51, 51, 51));
-        lblData.setText("Data");
+        lblData.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        lblData.setForeground(new java.awt.Color(0, 0, 0));
+        lblData.setText("Data:");
         jPanel_dados.add(lblData, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 50, -1));
 
-        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel2.setText("Produto");
-        jPanel_dados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Produto:");
+        jPanel_dados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
-        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel3.setText("Quantidade");
-        jPanel_dados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Quantidade:");
+        jPanel_dados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
-        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel4.setText("Validade");
-        jPanel_dados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Validade:");
+        jPanel_dados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
-        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel5.setText("Preço Venda");
-        jPanel_dados.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, -1, -1));
-        jPanel_dados.add(txtQuantidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 250, 25));
+        jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Preço Venda:");
+        jPanel_dados.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, -1, -1));
+        jPanel_dados.add(txtQuantidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 250, 30));
 
+        cbxFornecedor.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         cbxFornecedor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione" }));
-        jPanel_dados.add(cbxFornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 130, 25));
-        jPanel_dados.add(txtpVenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 110, 25));
-        jPanel_dados.add(txtValidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 250, 25));
+        jPanel_dados.add(cbxFornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 130, 30));
+        jPanel_dados.add(txtpVenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 110, 30));
+        jPanel_dados.add(txtValidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 250, 30));
 
-        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel6.setText("Preço Unit.");
-        jPanel_dados.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
-        jPanel_dados.add(txtpUnit, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 110, 25));
+        jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Preço Unit.:");
+        jPanel_dados.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+        jPanel_dados.add(txtpUnit, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 110, 30));
 
         txtId.setEditable(false);
         txtId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel_dados.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 40, -1));
 
-        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel7.setText("Fornecedor");
+        jLabel7.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Fornecedor:");
         jPanel_dados.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
         txtData.addActionListener(new java.awt.event.ActionListener() {
@@ -124,11 +126,12 @@ public class adm_cadprodutoVIEW extends javax.swing.JFrame {
                 txtDataActionPerformed(evt);
             }
         });
-        jPanel_dados.add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 110, 25));
-        jPanel_dados.add(txtProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 250, 25));
+        jPanel_dados.add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 110, 30));
+        jPanel_dados.add(txtProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 250, 30));
 
-        getContentPane().add(jPanel_dados, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 300, 290));
+        getContentPane().add(jPanel_dados, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 300, 360));
 
+        tabelaProduto.setBackground(new java.awt.Color(255, 255, 255));
         tabelaProduto.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -146,56 +149,79 @@ public class adm_cadprodutoVIEW extends javax.swing.JFrame {
             }
         });
         jScrollPane2.setViewportView(tabelaProduto);
+        if (tabelaProduto.getColumnModel().getColumnCount() > 0) {
+            tabelaProduto.getColumnModel().getColumn(0).setPreferredWidth(10);
+        }
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, 580, 430));
 
+        btncarregarCampo.setBackground(new java.awt.Color(255, 255, 255));
+        btncarregarCampo.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btncarregarCampo.setForeground(new java.awt.Color(0, 0, 0));
         btncarregarCampo.setText("Carregar Campos");
         btncarregarCampo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncarregarCampoActionPerformed(evt);
             }
         });
-        getContentPane().add(btncarregarCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(805, 520, -1, 35));
+        getContentPane().add(btncarregarCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 520, 150, 35));
 
+        btnCadastrar.setBackground(new java.awt.Color(153, 255, 153));
+        btnCadastrar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnCadastrar.setForeground(new java.awt.Color(0, 0, 0));
         btnCadastrar.setText("Salvar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadastrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 90, 35));
+        getContentPane().add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 80, 35));
 
+        btnAlterar.setBackground(new java.awt.Color(255, 255, 255));
+        btnAlterar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnAlterar.setForeground(new java.awt.Color(0, 0, 0));
         btnAlterar.setText("Editar");
         btnAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAlterarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 380, 90, 35));
+        getContentPane().add(btnAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, 80, 35));
 
+        btnExcluir.setBackground(new java.awt.Color(255, 102, 102));
+        btnExcluir.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnExcluir.setForeground(new java.awt.Color(255, 255, 255));
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExcluirActionPerformed(evt);
             }
         });
-        getContentPane().add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, 90, 35));
+        getContentPane().add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 460, 80, 35));
 
+        btnLimpar.setBackground(new java.awt.Color(255, 255, 255));
+        btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimparActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 90, 35));
+        getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 80, 35));
 
+        btnSair.setBackground(new java.awt.Color(255, 255, 255));
+        btnSair.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnSair.setForeground(new java.awt.Color(0, 0, 0));
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSairActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 430, 90, 35));
+        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 80, 35));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/template.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
         pack();
@@ -288,7 +314,6 @@ public class adm_cadprodutoVIEW extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel_cadproduto;
     private javax.swing.JPanel jPanel_dados;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblData;

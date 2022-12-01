@@ -32,13 +32,31 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        paineltotal = new javax.swing.JPanel();
+        saldoTotal = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaVendas = new javax.swing.JTable();
         btnPesquisar = new javax.swing.JButton();
-        saldoTotal = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Vendas");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        paineltotal.setBackground(new java.awt.Color(255, 255, 255));
+        paineltotal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        saldoTotal.setBackground(new java.awt.Color(255, 255, 255));
+        saldoTotal.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        saldoTotal.setForeground(new java.awt.Color(0, 0, 0));
+        saldoTotal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        saldoTotal.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        paineltotal.add(saldoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 30));
+
+        getContentPane().add(paineltotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 350, 30));
+
+        tabelaVendas.setBackground(new java.awt.Color(255, 255, 255));
+        tabelaVendas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tabelaVendas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -57,40 +75,21 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabelaVendas);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 47, 640, 250));
+
+        btnPesquisar.setBackground(new java.awt.Color(255, 255, 255));
+        btnPesquisar.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        btnPesquisar.setForeground(new java.awt.Color(0, 0, 0));
         btnPesquisar.setText("GERAR RELATÓRIO");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPesquisarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 310, -1, 30));
 
-        saldoTotal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 48, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(saldoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnPesquisar)))
-                .addGap(0, 55, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 47, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(saldoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPesquisar))
-                .addGap(0, 47, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/template.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 380));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -138,7 +137,9 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnPesquisar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel paineltotal;
     private javax.swing.JLabel saldoTotal;
     private javax.swing.JTable tabelaVendas;
     // End of variables declaration//GEN-END:variables

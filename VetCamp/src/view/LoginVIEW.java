@@ -38,38 +38,59 @@ public class LoginVIEW extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnEntrar = new javax.swing.JButton();
         jpSenha = new javax.swing.JPasswordField();
+        btnEntrar = new javax.swing.JButton();
         txtUsuario = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle(" ");
+        setTitle("Login");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnEntrar.setBackground(new java.awt.Color(0, 153, 51));
+        jpSenha.setBackground(new java.awt.Color(255, 255, 255));
+        jpSenha.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jpSenha.setForeground(new java.awt.Color(0, 0, 0));
+        jpSenha.setAlignmentX(0.0F);
+        jpSenha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(203, 222, 51)));
+        jpSenha.setCaretColor(new java.awt.Color(0, 0, 0));
+        getContentPane().add(jpSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 280, 40));
+
+        btnEntrar.setBackground(new java.awt.Color(241, 255, 129));
+        btnEntrar.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        btnEntrar.setForeground(new java.awt.Color(0, 0, 0));
         btnEntrar.setText("ENTRAR");
-        btnEntrar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
+        btnEntrar.setAlignmentY(1.0F);
+        btnEntrar.setBorder(null);
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEntrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 150, 50));
-        getContentPane().add(jpSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 280, 40));
-        getContentPane().add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 280, 40));
+        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 160, 60));
 
+        txtUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        txtUsuario.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        txtUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        txtUsuario.setAlignmentX(0.0F);
+        txtUsuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(203, 222, 51)));
+        txtUsuario.setCaretColor(new java.awt.Color(0, 0, 0));
+        getContentPane().add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 280, 40));
+
+        jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Usuário:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, 20));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, 20));
 
+        jLabel2.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Senha:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, -1, -1));
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 500));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, -1, -1));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Group 12 (1).png"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
