@@ -15,18 +15,18 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
 
     public atn_agendaVIEW() {
         initComponents();
-        setLocationRelativeTo(null);
-        txtIDAgenda.setVisible(false);
-        txtNome.setEnabled(false);
-        txtSexo.setEnabled(false);
-        txtCategoria.setEnabled(false);
-        txtDescricao.setEnabled(false);
-        listarAgenda();
+        setLocationRelativeTo(null); /*Configuração para abertura da janela no centro da tela*/
+        txtIDAgenda.setVisible(false); /*Estou iniciando o campo txtIDAgenda com a configuração para ele não ser vísivel ao usuário*/
+        txtNome.setEnabled(false); /*Estou iniciando o campo txtNomecom a configuração para ele não ser vísivel ao usuário*/
+        txtSexo.setEnabled(false); /*Estou iniciando o campo txtSexo com a configuração para ele não ser vísivel ao usuário*/
+        txtCategoria.setEnabled(false); /*Estou iniciando o campo txtCategoria com a configuração para ele não ser vísivel ao usuário*/
+        txtDescricao.setEnabled(false); /*Estou iniciando o campo txtIdDescrição com a configuração para ele não ser vísivel ao usuário*/
+        listarAgenda(); /*Esta inicializando o método para listar o agendamento*/
     }
 
-    Connection conn;
-    PreparedStatement pstm;
-    ResultSet rs;
+    Connection conn; /*A variavel conn é um objeto criado para trabalhar com a classe Connection*/
+    PreparedStatement pstm; /*A variavel pstm é um objeto criado para trabalhar com a classe PreparedStatement*/
+    ResultSet rs; /*A variavel rs é um objeto criado para trabalhar com a classe ResutlSet, que trará algum registro do Banco de Dados*/
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -220,11 +220,16 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /*Método privado do tipo void, criado para coletar informações sobre o animal selecionado pelo usuario*/
     private void txtIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIDKeyPressed
+        /*Toda vez que o usuario pressionar a tecla enter, ele entra no if*/
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-
+            
+            /*Estou convertendo o valor do campo txtID(String) para Inteiro*/
             int cod = Integer.parseInt(txtID.getText());
+            
+            /*Estou passando o comando sql através da String sql, e os valores com um ponto de interrogação, por que não sei o que o usuário vai inserir*/
             String sql = "Select nome_animal, sexo_animal, categoria_animal, descricao_animal from atn_animal where id_animal = ?";
             conn = new conexaoDAO().conectaBD();
 
