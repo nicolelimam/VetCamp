@@ -6,6 +6,7 @@ package view;
 
 import dao.atnDAO;
 import dto.adm_cadprodutoDTO;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -180,8 +181,10 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
         for (int i = 0; i < tabelaVendas.getRowCount(); i++) {
             soma = soma + Double.parseDouble(tabelaVendas.getValueAt(i, 1).toString());
         }
-
-       saldoTotal.setText("SALDO TOTAL: " + Double.toString(soma));
+        
+       DecimalFormat formatador = new DecimalFormat("0.00");
+       saldoTotal.setText("SALDO TOTAL:   R$" + formatador.format(soma));
+       //saldoTotal.setText("SALDO TOTAL: " + Double.toString(soma));
         
 
     }
