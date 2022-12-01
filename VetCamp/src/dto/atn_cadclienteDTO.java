@@ -1,24 +1,18 @@
 
+
 package dto;
 
 
-public class adm_cadfornecedorDTO {
+public class atn_cadclienteDTO {
     
     /*Variaveis privadas, podendo trabalhar com elas através dew getters e setters, sendo getters para retornar o valor que foi pelo pelo setters e armazenado na variavel local*/
-   
-    private int id_fornecedor;
-    private String nome, cnpj, endereco, telefone, email;
+    private String nome;
+    private String cpf;
+    private String endereco;
+    private String telefone;
+    private int id_cliente;
 
-
-    public int getId_fornecedor() {
-        return id_fornecedor;
-    }
-
-   
-    public void setId_fornecedor(int id_fornecedor) {
-        this.id_fornecedor = id_fornecedor;
-    }
-
+    
     
     public String getNome() {
         return nome;
@@ -29,14 +23,14 @@ public class adm_cadfornecedorDTO {
         this.nome = nome;
     }
 
-    
-    public String getCnpj() {
-        return cnpj;
+  
+    public String getCpf() {
+        return cpf;
     }
 
     
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     
@@ -60,15 +54,13 @@ public class adm_cadfornecedorDTO {
     }
 
     
-    public String getEmail() {
-        return email;
+    public int getId_cliente() {
+        return id_cliente;
     }
 
     
-    public void setEmail(String email) {
-        this.email = email;
+    public void setId_cliente(int id_cliente) {
+        this.id_cliente = id_cliente;
     }
-    
-    
     
 }

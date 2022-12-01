@@ -4,33 +4,27 @@ package dto;
 
 public class adm_cadusuario_cargoDTO {
 
-private int id_cargo;
-private String descricao;
+    /*Variaveis privadas, podendo trabalhar com elas através dew getters e setters, sendo getters para retornar o valor que foi pelo pelo setters e armazenado na variavel local*/
 
-    /**
-     * @return the id_cargo
-     */
+    private int id_cargo;
+    private String descricao;
+
+    
     public int getId_cargo() {
         return id_cargo;
     }
 
-    /**
-     * @param id_cargo the id_cargo to set
-     */
+    
     public void setId_cargo(int id_cargo) {
         this.id_cargo = id_cargo;
     }
 
-    /**
-     * @return the descricao
-     */
+    
     public String getDescricao() {
         return descricao;
     }
 
-    /**
-     * @param descricao the descricao to set
-     */
+   
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
