@@ -47,15 +47,13 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
         paineltotal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         saldoTotal.setBackground(new java.awt.Color(255, 255, 255));
-        saldoTotal.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        saldoTotal.setForeground(new java.awt.Color(0, 0, 0));
+        saldoTotal.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         saldoTotal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         saldoTotal.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        paineltotal.add(saldoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 30));
+        paineltotal.add(saldoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 30));
 
-        getContentPane().add(paineltotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 350, 30));
+        getContentPane().add(paineltotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 280, 30));
 
-        tabelaVendas.setBackground(new java.awt.Color(255, 255, 255));
         tabelaVendas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tabelaVendas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -79,7 +77,6 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
 
         btnPesquisar.setBackground(new java.awt.Color(255, 255, 255));
         btnPesquisar.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
-        btnPesquisar.setForeground(new java.awt.Color(0, 0, 0));
         btnPesquisar.setText("GERAR RELATÓRIO");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

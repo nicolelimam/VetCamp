@@ -82,37 +82,38 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
         panelFicha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         panelFicha.setForeground(new java.awt.Color(204, 204, 255));
         panelFicha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelFicha.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 250, 25));
+        panelFicha.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 260, 30));
 
+        jLabelNome.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelNome.setForeground(new java.awt.Color(51, 51, 51));
-        jLabelNome.setText("Nome");
-        panelFicha.add(jLabelNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
-        panelFicha.add(txtIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 120, 25));
+        jLabelNome.setText("Nome:");
+        panelFicha.add(jLabelNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+        panelFicha.add(txtIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 120, 30));
 
         jLabelIdade.setForeground(new java.awt.Color(51, 51, 51));
         jLabelIdade.setText("Idade");
-        panelFicha.add(jLabelIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        panelFicha.add(jLabelIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
         jLabelSexo.setForeground(new java.awt.Color(51, 51, 51));
         jLabelSexo.setText("Sexo");
-        panelFicha.add(jLabelSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, -1, -1));
-        panelFicha.add(txtSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 120, 25));
-        panelFicha.add(txtCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 250, 25));
+        panelFicha.add(jLabelSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, -1, -1));
+        panelFicha.add(txtSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 120, 30));
+        panelFicha.add(txtCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 160, 30));
 
         jLabelCategoria.setForeground(new java.awt.Color(51, 51, 51));
         jLabelCategoria.setText("Categoria");
-        panelFicha.add(jLabelCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+        panelFicha.add(jLabelCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
         jLabelDescricao.setForeground(new java.awt.Color(51, 51, 51));
         jLabelDescricao.setText("Descrição");
-        panelFicha.add(jLabelDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
-        panelFicha.add(txtDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 250, 25));
+        panelFicha.add(jLabelDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+        panelFicha.add(txtDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 260, 30));
 
         txtPrescricao.setColumns(20);
         txtPrescricao.setRows(5);
         jScrollPane2.setViewportView(txtPrescricao);
 
-        panelFicha.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, 330, 220));
+        panelFicha.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 320, 190));
 
         btnFinalizar.setText("Finalizar");
         btnFinalizar.addActionListener(new java.awt.event.ActionListener() {
@@ -120,7 +121,7 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
                 btnFinalizarActionPerformed(evt);
             }
         });
-        panelFicha.add(btnFinalizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 260, 90, 35));
+        panelFicha.add(btnFinalizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, 80, 35));
 
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -128,7 +129,7 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
                 btnLimparActionPerformed(evt);
             }
         });
-        panelFicha.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, 90, 35));
+        panelFicha.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, 80, 35));
 
         btnCancelar.setText("Cencelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -136,9 +137,9 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
-        panelFicha.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 90, 35));
+        panelFicha.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 80, 35));
 
-        getContentPane().add(panelFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 730, 300));
+        getContentPane().add(panelFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 760, 310));
 
         tabelaAtendimento.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -168,7 +169,7 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 220, 150, 50));
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 570));
 
         MenuPrincipal.setPreferredSize(new java.awt.Dimension(500, 30));
 

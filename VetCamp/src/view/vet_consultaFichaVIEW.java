@@ -54,6 +54,7 @@ public class vet_consultaFichaVIEW extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         txtPrescricao = new javax.swing.JTextArea();
         txtNome = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaConsulta = new javax.swing.JTable();
         jLabelArgumento = new javax.swing.JLabel();
@@ -61,48 +62,56 @@ public class vet_consultaFichaVIEW extends javax.swing.JFrame {
         txtPesq = new javax.swing.JTextField();
         btnPesquisar = new javax.swing.JButton();
         btnCarregar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panelFicha.setBackground(new java.awt.Color(204, 204, 255));
-        panelFicha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        panelFicha.setForeground(new java.awt.Color(204, 204, 255));
+        panelFicha.setBackground(new java.awt.Color(255, 255, 255));
+        panelFicha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelFicha.setForeground(new java.awt.Color(255, 255, 255));
+        panelFicha.setToolTipText("");
         panelFicha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel8.setText("Nome");
-        panelFicha.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
-        panelFicha.add(txtIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 120, 25));
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel8.setText("Prescrição:");
+        panelFicha.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, -1, -1));
+        panelFicha.add(txtIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 120, 30));
 
-        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel9.setText("Idade");
-        panelFicha.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel9.setText("Idade:");
+        panelFicha.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
-        jLabel10.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel10.setText("Sexo");
-        panelFicha.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
-        panelFicha.add(txtSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 25));
-        panelFicha.add(txtCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 250, 25));
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel10.setText("Sexo:");
+        panelFicha.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
+        panelFicha.add(txtSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 120, 30));
+        panelFicha.add(txtCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 250, 30));
 
-        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel11.setText("Categoria");
-        panelFicha.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel11.setText("Categoria:");
+        panelFicha.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
-        jLabel12.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel12.setText("Descrição");
-        panelFicha.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
-        panelFicha.add(txtDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 250, 25));
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel12.setText("Descrição:");
+        panelFicha.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+        panelFicha.add(txtDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 250, 30));
 
         txtPrescricao.setColumns(20);
         txtPrescricao.setRows(5);
+        txtPrescricao.setBorder(null);
         jScrollPane2.setViewportView(txtPrescricao);
 
-        panelFicha.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 270, 240));
-        panelFicha.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 250, 25));
+        panelFicha.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, 260, 230));
+        panelFicha.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 250, 30));
 
-        getContentPane().add(panelFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 560, 300));
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel13.setText("Nome:");
+        panelFicha.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
+        getContentPane().add(panelFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 560, 300));
+
+        tabelaConsulta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tabelaConsulta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -110,41 +119,62 @@ public class vet_consultaFichaVIEW extends javax.swing.JFrame {
             new String [] {
                 "ID", "NOME", "IDADE", "SEXO", "CATEGORIA"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(tabelaConsulta);
         if (tabelaConsulta.getColumnModel().getColumnCount() > 0) {
-            tabelaConsulta.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tabelaConsulta.getColumnModel().getColumn(0).setResizable(false);
+            tabelaConsulta.getColumnModel().getColumn(0).setPreferredWidth(3);
+            tabelaConsulta.getColumnModel().getColumn(1).setResizable(false);
+            tabelaConsulta.getColumnModel().getColumn(2).setResizable(false);
+            tabelaConsulta.getColumnModel().getColumn(3).setResizable(false);
+            tabelaConsulta.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, 520, 360));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, 520, 360));
 
+        jLabelArgumento.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelArgumento.setText("Argumento por consulta:");
-        getContentPane().add(jLabelArgumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 160, -1));
+        getContentPane().add(jLabelArgumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 160, -1));
 
+        btnVoltar.setBackground(new java.awt.Color(255, 255, 255));
+        btnVoltar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 400, 110, 40));
-        getContentPane().add(txtPesq, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 280, 30));
+        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 400, 110, 40));
+        getContentPane().add(txtPesq, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 290, 30));
 
+        btnPesquisar.setBackground(new java.awt.Color(255, 255, 255));
+        btnPesquisar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnPesquisar.setText("Buscar");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPesquisarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, 30));
+        getContentPane().add(btnPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, -1, 30));
 
+        btnCarregar.setBackground(new java.awt.Color(255, 255, 255));
+        btnCarregar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnCarregar.setText("Carregar");
         btnCarregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCarregarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCarregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(891, 400, 110, 40));
+        getContentPane().add(btnCarregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 400, 110, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -201,9 +231,11 @@ public class vet_consultaFichaVIEW extends javax.swing.JFrame {
     private javax.swing.JButton btnCarregar;
     private javax.swing.JButton btnPesquisar;
     private javax.swing.JButton btnVoltar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelArgumento;

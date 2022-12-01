@@ -104,7 +104,6 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
 
         btnEditar.setBackground(new java.awt.Color(255, 255, 255));
         btnEditar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnEditar.setForeground(new java.awt.Color(0, 0, 0));
         btnEditar.setText("Editar");
         btnEditar.setPreferredSize(new java.awt.Dimension(70, 24));
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -114,10 +113,11 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 80, 35));
 
-        btnSalvar.setBackground(new java.awt.Color(153, 255, 153));
+        btnSalvar.setBackground(new java.awt.Color(0, 204, 51));
         btnSalvar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnSalvar.setForeground(new java.awt.Color(0, 0, 0));
+        btnSalvar.setForeground(new java.awt.Color(255, 255, 255));
         btnSalvar.setText("Salvar");
+        btnSalvar.setBorder(null);
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalvarActionPerformed(evt);
@@ -125,10 +125,11 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 80, 35));
 
-        btnExcluir.setBackground(new java.awt.Color(255, 102, 102));
+        btnExcluir.setBackground(new java.awt.Color(255, 51, 51));
         btnExcluir.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         btnExcluir.setForeground(new java.awt.Color(255, 255, 255));
         btnExcluir.setText("Excluir");
+        btnExcluir.setBorder(null);
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExcluirActionPerformed(evt);
@@ -138,9 +139,6 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
 
         jScrollPane2.setBackground(new java.awt.Color(236, 236, 236));
 
-        tabelaFornecedor.setBackground(new java.awt.Color(255, 255, 255));
-        tabelaFornecedor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tabelaFornecedor.setForeground(new java.awt.Color(255, 255, 255));
         tabelaFornecedor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -168,7 +166,6 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
 
         btncarregarCampo.setBackground(new java.awt.Color(255, 255, 255));
         btncarregarCampo.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btncarregarCampo.setForeground(new java.awt.Color(0, 0, 0));
         btncarregarCampo.setText("Carregar Campos");
         btncarregarCampo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,7 +176,6 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
 
         btnSair.setBackground(new java.awt.Color(255, 255, 255));
         btnSair.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnSair.setForeground(new java.awt.Color(0, 0, 0));
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,7 +186,6 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
 
         btnLimpar.setBackground(new java.awt.Color(255, 255, 255));
         btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
