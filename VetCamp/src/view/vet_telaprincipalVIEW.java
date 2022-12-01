@@ -82,35 +82,29 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
 
         panelFicha.setBackground(new java.awt.Color(204, 255, 102));
         panelFicha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        panelFicha.setForeground(new java.awt.Color(0, 0, 0));
         panelFicha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panelFicha.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 260, 30));
 
         jLabelNome.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabelNome.setForeground(new java.awt.Color(0, 0, 0));
         jLabelNome.setText("Nome:");
         panelFicha.add(jLabelNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
         panelFicha.add(txtIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 120, 30));
 
         jLabelIdade.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        jLabelIdade.setForeground(new java.awt.Color(0, 0, 0));
         jLabelIdade.setText("Idade:");
         panelFicha.add(jLabelIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
 
         jLabelSexo.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        jLabelSexo.setForeground(new java.awt.Color(0, 0, 0));
         jLabelSexo.setText("Sexo:");
         panelFicha.add(jLabelSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, -1, -1));
         panelFicha.add(txtSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 120, 30));
         panelFicha.add(txtCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 260, 30));
 
         jLabelCategoria.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        jLabelCategoria.setForeground(new java.awt.Color(0, 0, 0));
         jLabelCategoria.setText("Categoria:");
         panelFicha.add(jLabelCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         jLabelDescricao.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        jLabelDescricao.setForeground(new java.awt.Color(0, 0, 0));
         jLabelDescricao.setText("Descrição:");
         panelFicha.add(jLabelDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
         panelFicha.add(txtDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 260, 30));
@@ -123,7 +117,6 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
 
         btnFinalizar.setBackground(new java.awt.Color(241, 255, 129));
         btnFinalizar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnFinalizar.setForeground(new java.awt.Color(0, 0, 0));
         btnFinalizar.setText("Finalizar");
         btnFinalizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,7 +127,6 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
 
         btnLimpar.setBackground(new java.awt.Color(241, 255, 129));
         btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,7 +137,6 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
 
         btnCancelar.setBackground(new java.awt.Color(241, 255, 129));
         btnCancelar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnCancelar.setForeground(new java.awt.Color(0, 0, 0));
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,7 +145,7 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
         });
         panelFicha.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, 100, 35));
 
-        getContentPane().add(panelFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 760, 310));
+        getContentPane().add(panelFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 760, 300));
 
         tabelaAtendimento.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -190,20 +181,17 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
 
         btnFicha.setBackground(new java.awt.Color(241, 255, 129));
         btnFicha.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
-        btnFicha.setForeground(new java.awt.Color(0, 0, 0));
         btnFicha.setText("Abrir Ficha");
         btnFicha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFichaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 220, 150, 50));
+        getContentPane().add(btnFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 220, 150, 50));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/template66.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 570));
 
-        MenuPrincipal.setBackground(new java.awt.Color(255, 255, 255));
-        MenuPrincipal.setForeground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setPreferredSize(new java.awt.Dimension(500, 30));
 
         jMConsulta.setText("Consulta");
