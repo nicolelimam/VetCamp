@@ -6,6 +6,7 @@ package view;
 
 import dao.atnDAO;
 import dto.adm_cadprodutoDTO;
+import java.awt.Dimension;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -22,6 +23,11 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
      */
     public adm_relvendasVIEW() {
         initComponents();
+        Dimension dim = this.getToolkit().getScreenSize();      
+	      int x = (int) (dim.getWidth()  - this.getSize().getWidth() ) / 2;
+	      int y = (int) (dim.getHeight() - this.getSize().getHeight()) / 2;
+	      this.setLocation(x,y);
+              
     }
 
     /**
@@ -42,6 +48,7 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Vendas");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         paineltotal.setBackground(new java.awt.Color(255, 255, 255));
@@ -78,7 +85,6 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
 
         btnPesquisar.setBackground(new java.awt.Color(241, 255, 129));
         btnPesquisar.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
-        btnPesquisar.setForeground(new java.awt.Color(0, 0, 0));
         btnPesquisar.setText("GERAR RELATÓRIO");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
