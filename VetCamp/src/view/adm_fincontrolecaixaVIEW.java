@@ -34,22 +34,17 @@ public class adm_fincontrolecaixaVIEW extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel_fincontroleCaixa = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaControl = new javax.swing.JTable();
         btninserirProdutos = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle(" ");
+        setTitle("Controle de Caixa ");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel_fincontroleCaixa.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
-        jLabel_fincontroleCaixa.setForeground(new java.awt.Color(244, 249, 252));
-        jLabel_fincontroleCaixa.setText("Controle de Caixa");
-        getContentPane().add(jLabel_fincontroleCaixa, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, -1, 40));
-
+        tabelaControl.setBackground(new java.awt.Color(255, 255, 255));
         tabelaControl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -68,16 +63,21 @@ public class adm_fincontrolecaixaVIEW extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabelaControl);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 920, 360));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 920, 360));
 
+        btninserirProdutos.setBackground(new java.awt.Color(255, 255, 255));
+        btninserirProdutos.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btninserirProdutos.setForeground(new java.awt.Color(0, 0, 0));
         btninserirProdutos.setText("Inserir Contas");
         btninserirProdutos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btninserirProdutosActionPerformed(evt);
             }
         });
-        getContentPane().add(btninserirProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 100, 150, 40));
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(btninserirProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 50, 150, 40));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/template2.png"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -125,7 +125,6 @@ public class adm_fincontrolecaixaVIEW extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JButton btninserirProdutos;
-    private javax.swing.JLabel jLabel_fincontroleCaixa;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabelaControl;
     // End of variables declaration//GEN-END:variables

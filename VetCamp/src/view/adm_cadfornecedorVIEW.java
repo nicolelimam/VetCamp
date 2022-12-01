@@ -68,27 +68,27 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel1.setText("Nome");
+        jLabel1.setText("Nome:");
         jPanel_dados.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel2.setText("CNPJ");
+        jLabel2.setText("CNPJ:");
         jPanel_dados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel3.setText("Endereço");
+        jLabel3.setText("Endereço:");
         jPanel_dados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel4.setText("Telefone");
+        jLabel4.setText("Telefone:");
         jPanel_dados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel5.setText("E-mail");
+        jLabel5.setText("E-mail:");
         jPanel_dados.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
         jPanel_dados.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 250, 30));
         jPanel_dados.add(txtCnpj, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 250, 30));
@@ -199,7 +199,7 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, 80, 35));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Rectangle 31.png"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/template.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
         pack();
