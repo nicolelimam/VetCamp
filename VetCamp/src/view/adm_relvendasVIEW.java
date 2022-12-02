@@ -3,6 +3,8 @@ package view;
 
 import dao.atnDAO;
 import dto.adm_cadprodutoDTO;
+import java.awt.Dimension;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -13,6 +15,7 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
     
     public adm_relvendasVIEW() {
         initComponents();
+
         setLocationRelativeTo(null); /*Configuração para abertura da janela no centro da tela*/
     }
 
@@ -30,6 +33,7 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Vendas");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         paineltotal.setBackground(new java.awt.Color(255, 255, 255));
@@ -66,7 +70,6 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
 
         btnPesquisar.setBackground(new java.awt.Color(241, 255, 129));
         btnPesquisar.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
-        btnPesquisar.setForeground(new java.awt.Color(0, 0, 0));
         btnPesquisar.setText("GERAR RELATÓRIO");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,8 +157,14 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
             soma = soma + Double.parseDouble(tabelaVendas.getValueAt(i, 1).toString());
         }
         
+
        /*Com o calculoo pronto, eu exibo ele através do campo saldoTotal*/
        saldoTotal.setText("SALDO TOTAL: " + Double.toString(soma));
+
+       DecimalFormat formatador = new DecimalFormat("0.00");
+       saldoTotal.setText("SALDO TOTAL:   R$" + formatador.format(soma));
+       //saldoTotal.setText("SALDO TOTAL: " + Double.toString(soma));
+
         
 
     }
