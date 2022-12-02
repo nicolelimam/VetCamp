@@ -303,7 +303,7 @@ public class adm_cadprodutoVIEW extends javax.swing.JFrame {
     /*Método privado, do tipo void, para cadastrar produtos*/
     private void cadastrarProduto() {
 
-         /*Criação das variaveis do tipo String e Int*/
+        /*Criação das variaveis do tipo String e Int*/
         String nome, quantidade, validade, punit, pvenda, data;
         int fk_fornecedor;
 
