@@ -63,9 +63,9 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
         setTitle("Agenda");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel_dados.setBackground(new java.awt.Color(204, 255, 102));
-        jPanel_dados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12))); // NOI18N
-        jPanel_dados.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel_dados.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel_dados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12))); // NOI18N
+        jPanel_dados.setForeground(new java.awt.Color(204, 204, 204));
         jPanel_dados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtVeterinario.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +81,7 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
         jPanel_dados.add(txtVeterinario, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 120, 30));
 
         jLabel2.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        jLabel2.setText("Data:");
+        jLabel2.setText("Horário:");
         jPanel_dados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
@@ -138,8 +138,9 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
 
         getContentPane().add(jPanel_dados, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 800, 170));
 
-        btnCadastrar.setBackground(new java.awt.Color(241, 255, 129));
+        btnCadastrar.setBackground(new java.awt.Color(147, 112, 219));
         btnCadastrar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrar.setText("Agendar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,8 +149,9 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 40, 90, 30));
 
-        btnAlterar.setBackground(new java.awt.Color(241, 255, 129));
+        btnAlterar.setBackground(new java.awt.Color(30, 144, 255));
         btnAlterar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnAlterar.setForeground(new java.awt.Color(255, 255, 255));
         btnAlterar.setText("Editar");
         btnAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,8 +160,9 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 80, 90, 30));
 
-        btncarregarCampo.setBackground(new java.awt.Color(241, 255, 129));
+        btncarregarCampo.setBackground(new java.awt.Color(0, 206, 209));
         btncarregarCampo.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btncarregarCampo.setForeground(new java.awt.Color(255, 255, 255));
         btncarregarCampo.setText("Carregar");
         btncarregarCampo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,8 +194,9 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 920, 360));
 
-        btnLimpar.setBackground(new java.awt.Color(241, 255, 129));
+        btnLimpar.setBackground(new java.awt.Color(205, 133, 63));
         btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnLimpar.setForeground(new java.awt.Color(255, 255, 255));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,7 +205,7 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 140, 90, 30));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
         pack();

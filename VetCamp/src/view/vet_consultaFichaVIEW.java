@@ -59,37 +59,32 @@ public class vet_consultaFichaVIEW extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panelFicha.setBackground(new java.awt.Color(204, 255, 102));
-        panelFicha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        panelFicha.setBackground(new java.awt.Color(255, 255, 255));
+        panelFicha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         panelFicha.setForeground(new java.awt.Color(255, 255, 255));
         panelFicha.setToolTipText("");
         panelFicha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Prescrição:");
         panelFicha.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, -1, 20));
         panelFicha.add(txtIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 120, 30));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Idade:");
         panelFicha.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, 20));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Sexo:");
         panelFicha.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, 20));
         panelFicha.add(txtSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 120, 30));
         panelFicha.add(txtCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 250, 30));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Categoria:");
         panelFicha.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, 20));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Descrição:");
         panelFicha.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, 20));
         panelFicha.add(txtDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 250, 30));
@@ -103,7 +98,6 @@ public class vet_consultaFichaVIEW extends javax.swing.JFrame {
         panelFicha.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 250, 30));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Nome:");
         panelFicha.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, 20));
 
@@ -139,13 +133,12 @@ public class vet_consultaFichaVIEW extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, 520, 360));
 
         jLabelArgumento.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabelArgumento.setForeground(new java.awt.Color(0, 0, 0));
         jLabelArgumento.setText("Argumento por consulta:");
         getContentPane().add(jLabelArgumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, 20));
 
-        btnVoltar.setBackground(new java.awt.Color(241, 255, 129));
+        btnVoltar.setBackground(new java.awt.Color(153, 153, 153));
         btnVoltar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnVoltar.setForeground(new java.awt.Color(0, 0, 0));
+        btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,9 +148,9 @@ public class vet_consultaFichaVIEW extends javax.swing.JFrame {
         getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 400, 110, 40));
         getContentPane().add(txtPesq, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 290, 30));
 
-        btnPesquisar.setBackground(new java.awt.Color(241, 255, 129));
+        btnPesquisar.setBackground(new java.awt.Color(153, 153, 153));
         btnPesquisar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnPesquisar.setForeground(new java.awt.Color(0, 0, 0));
+        btnPesquisar.setForeground(new java.awt.Color(255, 255, 255));
         btnPesquisar.setText("Buscar");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,9 +159,9 @@ public class vet_consultaFichaVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, -1, 30));
 
-        btnCarregar.setBackground(new java.awt.Color(241, 255, 129));
+        btnCarregar.setBackground(new java.awt.Color(0, 206, 209));
         btnCarregar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCarregar.setForeground(new java.awt.Color(0, 0, 0));
+        btnCarregar.setForeground(new java.awt.Color(255, 255, 255));
         btnCarregar.setText("Carregar");
         btnCarregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,7 +170,7 @@ public class vet_consultaFichaVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnCarregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 400, 110, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-5.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 460));
 
         pack();

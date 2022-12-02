@@ -70,8 +70,8 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panelFicha.setBackground(new java.awt.Color(204, 255, 102));
-        panelFicha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        panelFicha.setBackground(new java.awt.Color(255, 255, 255));
+        panelFicha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         panelFicha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panelFicha.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 260, 30));
 
@@ -105,8 +105,9 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
 
         panelFicha.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 340, 190));
 
-        btnFinalizar.setBackground(new java.awt.Color(241, 255, 129));
+        btnFinalizar.setBackground(new java.awt.Color(147, 112, 219));
         btnFinalizar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnFinalizar.setForeground(new java.awt.Color(255, 255, 255));
         btnFinalizar.setText("Finalizar");
         btnFinalizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,8 +116,9 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
         });
         panelFicha.add(btnFinalizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 240, 90, 35));
 
-        btnLimpar.setBackground(new java.awt.Color(241, 255, 129));
+        btnLimpar.setBackground(new java.awt.Color(205, 133, 63));
         btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnLimpar.setForeground(new java.awt.Color(255, 255, 255));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,8 +127,9 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
         });
         panelFicha.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 90, 35));
 
-        btnCancelar.setBackground(new java.awt.Color(241, 255, 129));
+        btnCancelar.setBackground(new java.awt.Color(240, 72, 66));
         btnCancelar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,8 +172,9 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 940, 170));
 
-        btnFicha.setBackground(new java.awt.Color(241, 255, 129));
+        btnFicha.setBackground(new java.awt.Color(0, 206, 209));
         btnFicha.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
+        btnFicha.setForeground(new java.awt.Color(255, 255, 255));
         btnFicha.setText("Abrir Ficha");
         btnFicha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

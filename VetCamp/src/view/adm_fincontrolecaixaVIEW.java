@@ -32,7 +32,6 @@ public class adm_fincontrolecaixaVIEW extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tabelaControl.setBackground(new java.awt.Color(255, 255, 255));
         tabelaControl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -53,18 +52,18 @@ public class adm_fincontrolecaixaVIEW extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 920, 360));
 
-        btninserirProdutos.setBackground(new java.awt.Color(241, 255, 129));
-        btninserirProdutos.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btninserirProdutos.setForeground(new java.awt.Color(0, 0, 0));
+        btninserirProdutos.setBackground(new java.awt.Color(0, 206, 209));
+        btninserirProdutos.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        btninserirProdutos.setForeground(new java.awt.Color(255, 255, 255));
         btninserirProdutos.setText("Inserir Contas");
         btninserirProdutos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btninserirProdutosActionPerformed(evt);
             }
         });
-        getContentPane().add(btninserirProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 50, 150, 40));
+        getContentPane().add(btninserirProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 80, 150, 40));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
         pack();
