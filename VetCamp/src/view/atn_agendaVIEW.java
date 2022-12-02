@@ -264,24 +264,30 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
     }//GEN-LAST:event_txtIDKeyPressed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        /*Chamada de métodos*/
         Agendar();
         limparCampos();
         listarAgenda();
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btncarregarCampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncarregarCampoActionPerformed
+        /*Chamada de métodos*/
         carregarCampos();
     }//GEN-LAST:event_btncarregarCampoActionPerformed
 
     private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
+        /*Chamada de métodos*/
         AlterarAgenda();
         limparCampos();
         listarAgenda();
     }//GEN-LAST:event_btnAlterarActionPerformed
-
+    
+    /*Método privado do tipo void, criado para coletar informações sobre o animal selecionado pelo usuario*/
     private void txtVeterinarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtVeterinarioKeyPressed
+        /*Toda vez que o usuario pressionar a tecla enter, ele entra no if*/
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-
+            
+            /*Estou passando o comando sql através da String sql, e os valores com um ponto de interrogação, por que não sei o que o usuário vai inserir*/
             String sql = "SELECT nome_usuario from adm_usuario where fk_cargo = 3 and nome_usuario like '" + txtVeterinario.getText() + "%'";
             conn = new conexaoDAO().conectaBD();
 
@@ -308,6 +314,7 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
     }//GEN-LAST:event_txtVeterinarioKeyPressed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
+        /*Chamada de métodos*/
         limparCampos();
     }//GEN-LAST:event_btnLimparActionPerformed
 
@@ -319,35 +326,9 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTipoActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(atn_agendaVIEW.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(atn_agendaVIEW.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(atn_agendaVIEW.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(atn_agendaVIEW.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new atn_agendaVIEW().setVisible(true);
@@ -384,8 +365,10 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
     private javax.swing.JTextField txtVeterinario;
     // End of variables declaration//GEN-END:variables
 
+    /*Método privado, do tipo void, para cadastrar dados na agenda*/
     private void Agendar() {
-
+        
+        /*Criação das variaveis do tipo String*/
         String data, tipo, sexo, categoria, descricao, nome_animal, vet;
         int id_animal;
 
@@ -397,9 +380,11 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
         nome_animal = txtNome.getText();
         id_animal = Integer.parseInt(txtID.getText());
         vet = txtVeterinario.getText();
-
+        
+        /*Estou instanciando a classe atn_agendaDTO*/
         atn_agendaDTO objagenda = new atn_agendaDTO();
-
+        
+        /*Estou passando os valores armazanedos nas variaveis locais, para o objagenda através dos setters*/
         objagenda.setData_agenda(data);
         objagenda.setTipo_agenda(tipo);
         objagenda.setSexo_agenda(sexo);
@@ -408,12 +393,15 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
         objagenda.setNome_animal(nome_animal);
         objagenda.setFk_animal(id_animal);
         objagenda.setVeterinario(vet);
-
+        
+        /*Estou instanciando a classe atnDAO*/
         atnDAO objatn = new atnDAO();
+        /*Passando o objeto objatn por parametro com seus respectivos dados*/
         objatn.agendaDAO(objagenda);
 
     }
-
+    
+    /*Método privado, do tipo void para limpar campos*/
     private void limparCampos() {
 
         txtVeterinario.setEnabled(true);
@@ -431,20 +419,26 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
         txtDescricao.setText("");
         txtData.requestFocus();
     }
-
+    
+    /*Método privado do tipo void para atualizar a tabela Agenda*/
     private void listarAgenda() {
 
         try {
-
+            
+            /*Estou instanciando a classe atnDAO*/
             atnDAO objatn = new atnDAO();
-
+            
+            /*Configurando a tabela agenda para receber os dados*/
             DefaultTableModel model = (DefaultTableModel) tabelaAgenda.getModel();
             model.setNumRows(0);
-
+            
+            /*Estou criando uma arraylist para pegar informações do método ppesquisarAgenda e adicionar a listag */
             ArrayList<atn_agendaDTO> listag = objatn.pesquisarAgenda();
-
+            
+            /*Adicionei o for para entrar no laço enquanto tiver registros*/
             for (int num = 0; num < listag.size(); num++) {
-
+                
+                /*Estou adicionando os registros na tabelaAgenda*/
                 model.addRow(new Object[]{
                     listag.get(num).getId_agenda(),
                     listag.get(num).getData_agenda(),
@@ -462,9 +456,11 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "atn_agendaVIEW - listarAgenda: " + erro);
         }
     }
-
+    
+    /*Método privado do tipo void, para carregar os valores que estão na tabela para os respectivos campos*/
     private void carregarCampos() {
-
+        
+        /*Variavel setar, do tipo int, para armazenar a linha que o usuário selecionou*/
         int setar = tabelaAgenda.getSelectedRow();
 
         txtVeterinario.setEnabled(false);
@@ -480,23 +476,29 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
         txtCategoria.setText(tabelaAgenda.getModel().getValueAt(setar, 7).toString());
         txtDescricao.setText(tabelaAgenda.getModel().getValueAt(setar, 8).toString());
     }
-
+    
+    /*Metodo privado do tipo void para alterar informações dos dados dA Agenda*/
     private void AlterarAgenda() {
-
+        
+        /*Criação das variaveis do tipo String e Int, para coletar os dados do campos*/
         String data, tipo;
         int id_agenda;
 
         id_agenda = Integer.parseInt(txtIDAgenda.getText());
         data = txtData.getText();
         tipo = txtTipo.getText();
-
+        
+        /*Instanciando a classe atn_agendaDTO*/
         atn_agendaDTO objagenda = new atn_agendaDTO();
-
+        
+        /*Estou passando os valores das variaveis, e passando para objagenda através dos setters*/
         objagenda.setId_agenda(id_agenda);
         objagenda.setData_agenda(data);
         objagenda.setTipo_agenda(tipo);
-
+        
+        /*Instanciando a classe atnDAO*/
         atnDAO objatn = new atnDAO();
+        /*Passando o objeto objatn por parametro com seus respectivos dados*/
         objatn.alterarAgenda(objagenda);
 
     }
