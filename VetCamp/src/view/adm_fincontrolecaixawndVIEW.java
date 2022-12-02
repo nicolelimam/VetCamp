@@ -44,18 +44,22 @@ public class adm_fincontrolecaixawndVIEW extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel_Dados.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel_Dados.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Dados.setText("Valor:");
         getContentPane().add(jLabel_Dados, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, -1, -1));
 
         jLabel_Descricao.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel_Descricao.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Descricao.setText("Descrição:");
         getContentPane().add(jLabel_Descricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 84, -1));
 
         jLabel_Tipo.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel_Tipo.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Tipo.setText("Tipo:");
         getContentPane().add(jLabel_Tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, -1, -1));
 
         jLabel_Data.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel_Data.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Data.setText("Data:");
         getContentPane().add(jLabel_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
@@ -87,9 +91,9 @@ public class adm_fincontrolecaixawndVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 120, 90, 30));
 
-        btnAdd.setBackground(new java.awt.Color(0, 206, 209));
+        btnAdd.setBackground(new java.awt.Color(241, 255, 129));
         btnAdd.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdd.setForeground(new java.awt.Color(0, 0, 0));
         btnAdd.setText("Adicionar");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,9 +102,9 @@ public class adm_fincontrolecaixawndVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, 40));
 
-        btnLimpar.setBackground(new java.awt.Color(205, 133, 63));
+        btnLimpar.setBackground(new java.awt.Color(241, 255, 129));
         btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnLimpar.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,9 +113,9 @@ public class adm_fincontrolecaixawndVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 90, 40));
 
-        btnVoltar.setBackground(new java.awt.Color(153, 153, 153));
+        btnVoltar.setBackground(new java.awt.Color(241, 255, 129));
         btnVoltar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        btnVoltar.setForeground(new java.awt.Color(0, 0, 0));
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +124,7 @@ public class adm_fincontrolecaixawndVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 90, 41));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 250));
 
         pack();

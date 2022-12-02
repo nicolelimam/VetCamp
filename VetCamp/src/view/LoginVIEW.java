@@ -139,7 +139,7 @@ public class LoginVIEW extends javax.swing.JFrame {
                 /*Criação das variaveis do tipo Int*/
                 int cargo;
 
-                /*pega o dado referente ao cargo e verifica o nivel do cargo*/
+                /*coleta o dado referente ao cargo e verifica o nivel do cargo*/
                 cargo = rslogin.getInt("fk_cargo");
                 
                 /*Se o cargo for ==1, ele chama a tela do administrador*/

@@ -68,9 +68,8 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 47, 640, 250));
 
-        btnPesquisar.setBackground(new java.awt.Color(0, 206, 209));
+        btnPesquisar.setBackground(new java.awt.Color(241, 255, 129));
         btnPesquisar.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
-        btnPesquisar.setForeground(new java.awt.Color(255, 255, 255));
         btnPesquisar.setText("GERAR RELATÓRIO");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,7 +78,7 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 310, -1, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 380));
 
         pack();
@@ -110,7 +109,7 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
     private javax.swing.JTable tabelaVendas;
     // End of variables declaration//GEN-END:variables
 
- /*Método privado do tipo void para atualizar a tabela Vendas*/
+ /*Método privado do tipo void para atualizar a tabela de relatórios Vendas*/
  private void relatVenda() {
 
         try {
@@ -164,7 +163,7 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
 
        DecimalFormat formatador = new DecimalFormat("0.00");
        saldoTotal.setText("SALDO TOTAL:   R$" + formatador.format(soma));
-       //saldoTotal.setText("SALDO TOTAL: " + Double.toString(soma));
+      
 
         
 

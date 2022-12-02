@@ -17,8 +17,8 @@ public class vetDAO {
     /*A variavel pstm é um objeto criado para trabalhar com a classe PreparedStatement*/
     ResultSet rs;
     /*A variavel rs é um objeto criado para trabalhar com a classe ResutlSet, que trará algum registro do Banco de Dados*/
- /*O ArrayList é uma classe genérica que traz uma lista de informações do banco de dados*/
- /*listahc são objetos dos ArrayLists criados*/
+    /*O ArrayList é uma classe genérica que traz uma lista de informações do banco de dados*/
+    /*listahc são objetos dos ArrayLists criados*/
     ArrayList<vet_atendimentoDTO> listahc = new ArrayList<>();
 
     /*É um metodo do tipo void, que espera alguns parâmetros da classe vet_atendimentoDTO para fazer a inserção de dados na tabela vet_ficha*/

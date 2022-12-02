@@ -27,7 +27,7 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
         listarAgenda(); /*Esta inicializando o método para listar a tabela agenda*/
     }
 
-   Connection conn; /*A variavel conn é um objeto criado para trabalhar com a classe Connection*/
+    Connection conn; /*A variavel conn é um objeto criado para trabalhar com a classe Connection*/
     PreparedStatement pstm; /*A variavel pstm é um objeto criado para trabalhar com a classe PreparedStatement*/
     ResultSet rs; /*A variavel rs é um objeto criado para trabalhar com a classe ResutlSet, que trará algum registro do Banco de Dados*/
     
@@ -70,8 +70,8 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panelFicha.setBackground(new java.awt.Color(255, 255, 255));
-        panelFicha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        panelFicha.setBackground(new java.awt.Color(204, 255, 102));
+        panelFicha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         panelFicha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panelFicha.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 260, 30));
 
@@ -105,9 +105,8 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
 
         panelFicha.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 340, 190));
 
-        btnFinalizar.setBackground(new java.awt.Color(147, 112, 219));
+        btnFinalizar.setBackground(new java.awt.Color(241, 255, 129));
         btnFinalizar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnFinalizar.setForeground(new java.awt.Color(255, 255, 255));
         btnFinalizar.setText("Finalizar");
         btnFinalizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,9 +115,8 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
         });
         panelFicha.add(btnFinalizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 240, 90, 35));
 
-        btnLimpar.setBackground(new java.awt.Color(205, 133, 63));
+        btnLimpar.setBackground(new java.awt.Color(241, 255, 129));
         btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnLimpar.setForeground(new java.awt.Color(255, 255, 255));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,9 +125,8 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
         });
         panelFicha.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 90, 35));
 
-        btnCancelar.setBackground(new java.awt.Color(240, 72, 66));
+        btnCancelar.setBackground(new java.awt.Color(241, 255, 129));
         btnCancelar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,9 +169,8 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 940, 170));
 
-        btnFicha.setBackground(new java.awt.Color(0, 206, 209));
+        btnFicha.setBackground(new java.awt.Color(241, 255, 129));
         btnFicha.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
-        btnFicha.setForeground(new java.awt.Color(255, 255, 255));
         btnFicha.setText("Abrir Ficha");
         btnFicha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -334,7 +330,7 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
         
         /*Estou instanciando a classe vetDAO*/
         vetDAO objvet = new vetDAO();
-        /*Passando o objeto objvet por parametro com seus respectivos dados*/
+        /*Passando o objeto objatendimento por parametro com seus respectivos dados*/
         objvet.cadFicha(objatendimento);
         
         /*Estou passando o comando sql através da String sql, e os valores com um ponto de interrogação, por que não sei o que o usuário vai inserir*/
@@ -410,14 +406,14 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
 
         try {
             
-            /*Estou instanciando a classe aTNDAO*/
+            /*Estou instanciando a classe atnDAO*/
             atnDAO objatn = new atnDAO();
             
              /*Configurando a tabela atendimento para receber os dados*/
             DefaultTableModel model = (DefaultTableModel) tabelaAtendimento.getModel();
             model.setNumRows(0);
             
-            /*Estou criando uma arraylist para pegar informações do método ppesquisarAgenda e adicionar a listag */
+            /*Estou criando uma arraylist para pegar informações do método pesquisarAgenda e adicionar a listag */
             ArrayList<atn_agendaDTO> listag = objatn.pesquisarAgenda();
             
             /*Adicionei o for para entrar no laço enquanto tiver registros*/

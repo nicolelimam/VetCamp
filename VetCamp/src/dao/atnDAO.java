@@ -76,7 +76,7 @@ public class atnDAO {
 
                 /*Instanciando a classe atn_cadclienteDTO*/
                 atn_cadclienteDTO objcadclientedto = new atn_cadclienteDTO();
-                /*Estou pegando as informações do banco, através do rs(ResultSet), e passando para minha classe atn_clienteDTO através dos setters*/
+                /*Estou pegando as informações do banco, através do rs(ResultSet), e passando para minha classe atn_cadclienteDTO através dos setters*/
                 objcadclientedto.setId_cliente(rs.getInt("id_cliente"));
                 objcadclientedto.setNome(rs.getString("nome_cliente"));
                 objcadclientedto.setCpf(rs.getString("cpf_cliente"));
@@ -129,7 +129,7 @@ public class atnDAO {
         }
 
     }
-    /*É um método do tipo void, que espera alguns parâmetro da classe aatn_cadclienteDTO para que possa deletar um registro da tabela atn_cliente*/
+    /*É um método do tipo void, que espera alguns parâmetro da classe atn_cadclienteDTO para que possa deletar um registro da tabela atn_cliente*/
     public void deletarCliente(atn_cadclienteDTO objcadclientedto) {
 
         /*Estou passando o comando sql através da String sql, e os valores com um ponto de interrogação, por que não sei o que o usuário vai inserir*/
@@ -259,7 +259,7 @@ public class atnDAO {
             /*Estou utilizando o while, para que enquanto tiver linha(registro), ele adicione a listaa.add*/
             while (rs.next()) {
                 
-                /*Instanciando a classe adm_cadusuario*/
+                /*Instanciando a classe atn_cadanimalDTO*/
                 atn_cadanimalDTO objcadanimaldto = new atn_cadanimalDTO();
                 /*Estou pegando as informações do banco, através do rs(ResultSet), e passando para minha classe atn_cadanimalDTO através dos setters*/
                 objcadanimaldto.setId_animal(rs.getInt("id_animal"));
@@ -295,7 +295,7 @@ public class atnDAO {
             
             /*pstm está recebendo o resultado da conexão e também preapando para enviar o comando sql*/
             pstm = conn.prepareStatement(sql);
-            /*aqui estou passando os valores através dos gets da classe adm_cadusuarioDTO, para os respectivos valores(?)*/
+            /*aqui estou passando os valores através dos gets da classe atn_cadanimalDTO, para os respectivos valores(?)*/
             pstm.setString(1, objcadanimaldto.getNome());
             pstm.setString(2, objcadanimaldto.getIdade());
             pstm.setString(3, objcadanimaldto.getSexo());
@@ -404,7 +404,7 @@ public class atnDAO {
 
                 /*Instanciando a classe atn_agendaDTO*/
                 atn_agendaDTO objagenda = new atn_agendaDTO();
-                /*Estou pegando as informações do banco, através do rs(ResultSet), e passando para minha classe adm_cadfornecedorDTO através dos setters*/
+                /*Estou pegando as informações do banco, através do rs(ResultSet), e passando para minha classe atn_agendaDTO através dos setters*/
                 objagenda.setId_agenda(rs.getInt("id_agenda"));
                 objagenda.setData_agenda(rs.getString("data_agenda"));
                 objagenda.setTipo_agenda(rs.getString("tipo_agenda"));
@@ -428,7 +428,7 @@ public class atnDAO {
 
     }
     
-    /*É um método do tipo void, que espera alguns parâmetros da classe atn_agendarDTO para que possa fazer a  alteração nos registro da tabela atn_agenda*/
+    /*É um método do tipo void, que espera alguns parâmetros da classe atn_agendaDTO para que possa fazer a  alteração nos registro da tabela atn_agenda*/
     public void alterarAgenda(atn_agendaDTO objagenda) {
 
         /*Estou passando o comando sql através da String sql, e os valores com um ponto de interrogação, por que não sei o que o usuário vai inserir*/

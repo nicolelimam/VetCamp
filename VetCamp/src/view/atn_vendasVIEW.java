@@ -64,8 +64,8 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         setTitle("Vendas");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Panel_dados.setBackground(new java.awt.Color(255, 255, 255));
-        Panel_dados.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        Panel_dados.setBackground(new java.awt.Color(204, 255, 102));
+        Panel_dados.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         Panel_dados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -98,16 +98,19 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel12.setText("Preço:");
         Panel_dados.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, 20));
+
+        txtPreco.setEditable(false);
         Panel_dados.add(txtPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 90, 30));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel13.setText("Valor:");
         Panel_dados.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, 20));
+
+        txtValor.setEditable(false);
         Panel_dados.add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 80, 30));
 
-        btnAdicionar.setBackground(new java.awt.Color(0, 206, 209));
+        btnAdicionar.setBackground(new java.awt.Color(241, 255, 129));
         btnAdicionar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnAdicionar.setForeground(new java.awt.Color(255, 255, 255));
         btnAdicionar.setText("Adicionar");
         btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +129,8 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         jLabelPagamento.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPagamento.setText("PAGAMENTO");
         getContentPane().add(jLabelPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 120, -1, 20));
+
+        txtTroco.setEditable(false);
         getContentPane().add(txtTroco, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 200, 190, 30));
 
         tabelaVenda.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -156,9 +161,12 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         jLabelTotal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelTotal.setText("TOTAL");
         getContentPane().add(jLabelTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 60, -1, 20));
+
+        txtTotal.setEditable(false);
         getContentPane().add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 80, 190, 30));
         getContentPane().add(txtPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 140, 190, 30));
 
+        txtExtrato.setEditable(false);
         txtExtrato.setColumns(20);
         txtExtrato.setRows(5);
         txtExtrato.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
@@ -166,9 +174,8 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 310, 290, 250));
 
-        btnRealizarVenda.setBackground(new java.awt.Color(147, 112, 219));
+        btnRealizarVenda.setBackground(new java.awt.Color(241, 255, 129));
         btnRealizarVenda.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnRealizarVenda.setForeground(new java.awt.Color(255, 255, 255));
         btnRealizarVenda.setText("Realizar Venda");
         btnRealizarVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,7 +184,7 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnRealizarVenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 250, 230, 40));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
         pack();
@@ -413,7 +420,7 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         Troco();
         Extrato();
         
-        /*variaveis para coletar os ados dos campos txtTotal, txtData*/
+        /*variaveis para coletar os dados dos campos txtTotal, txtData*/
         vt = txtTotal.getText();
         dt = txtData.getText();
         
@@ -423,9 +430,7 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnRealizarVendaActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String args[]) {
         
         java.awt.EventQueue.invokeLater(new Runnable() {

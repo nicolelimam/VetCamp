@@ -108,7 +108,7 @@ public class admDAO {
             /*Estou utilizando o while, para que enquanto tiver linha(registro), ele adicione a lista.add*/
             while (rs.next()) {
 
-                /*Instanciando a classe adm_cadusuario*/
+                /*Instanciando a classe adm_cadusuarioDTO*/
                 adm_cadusuarioDTO objcadusuariodto = new adm_cadusuarioDTO();
                 /*Estou pegando as informações do banco, através do rs(ResultSet), e passando para minha classe adm_cadusuarioDTO através dos setters*/
                 objcadusuariodto.setId_usuario(rs.getInt("id_usuario"));
@@ -222,7 +222,7 @@ public class admDAO {
             /*pstm está recebendo o resultado da conexão e também preapando para enviar o comando sql*/
             pstm = conn.prepareStatement(sql);
 
-            /*aqui estou passando os valores através dos gets da classe adm_cadusuarioDTO, para os respectivos valores(?)*/
+            /*aqui estou passando os valores através dos gets da classe adm_cadfornecedorDTO, para os respectivos valores(?)*/
             pstm.setString(1, objcadfornecedordto.getNome());
             pstm.setString(2, objcadfornecedordto.getCnpj());
             pstm.setString(3, objcadfornecedordto.getEndereco());
@@ -421,7 +421,7 @@ public class admDAO {
         }
     }
 
-    /*É um método do tipo Resultset que traz a informações  referente aos cargos*/
+    /*É um método do tipo Resultset que traz a informações  referente aos nomes dos fornecedores*/
     public ResultSet listarFornecedor() {
 
         /*Estou passando o comando sql através da String sql*/
@@ -617,7 +617,7 @@ public class admDAO {
 
             /*pstm está recebendo o resultado da conexão e também preapando para enviar o comando sql*/
             pstm = conn.prepareStatement(sql);
-            /*aqui estou passando os valores através dos gets da classe adm_produtoDTO, para os respectivos valores(?)*/
+            /*aqui estou passando os valores através dos gets da classe adm_cadprodutoDTO, para os respectivos valores(?)*/
             pstm.setInt(1, objcadprodutodto.getId_produto());
 
             /*Aqui executo o comando sql*/

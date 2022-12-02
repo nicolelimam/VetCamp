@@ -38,6 +38,7 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         btnAlterar = new javax.swing.JButton();
         btncarregarCampo = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
+        btnSair = new javax.swing.JButton();
         jLabel_background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -45,23 +46,27 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         setFont(new java.awt.Font("AcadEref", 0, 10)); // NOI18N
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel_dados.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel_dados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12))); // NOI18N
+        jPanel_dados.setBackground(new java.awt.Color(204, 255, 102));
+        jPanel_dados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12))); // NOI18N
         jPanel_dados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Nome:");
         jPanel_dados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("CPF:");
         jPanel_dados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Endereço:");
         jPanel_dados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Telefone:");
         jPanel_dados.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
         jPanel_dados.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 250, 30));
@@ -103,10 +108,11 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, 580, 430));
 
-        btnCadastrar.setBackground(new java.awt.Color(50, 205, 50));
+        btnCadastrar.setBackground(new java.awt.Color(0, 204, 51));
         btnCadastrar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrar.setText("Salvar");
+        btnCadastrar.setBorder(null);
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadastrarActionPerformed(evt);
@@ -114,10 +120,11 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 80, 35));
 
-        btnExcluir.setBackground(new java.awt.Color(240, 72, 66));
+        btnExcluir.setBackground(new java.awt.Color(255, 51, 51));
         btnExcluir.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnExcluir.setForeground(new java.awt.Color(255, 255, 255));
         btnExcluir.setText("Excluir");
+        btnExcluir.setBorder(null);
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExcluirActionPerformed(evt);
@@ -125,9 +132,9 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, 80, 35));
 
-        btnAlterar.setBackground(new java.awt.Color(30, 144, 255));
+        btnAlterar.setBackground(new java.awt.Color(241, 255, 129));
         btnAlterar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnAlterar.setForeground(new java.awt.Color(255, 255, 255));
+        btnAlterar.setForeground(new java.awt.Color(0, 0, 0));
         btnAlterar.setText("Editar");
         btnAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,9 +143,9 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 80, 35));
 
-        btncarregarCampo.setBackground(new java.awt.Color(0, 206, 209));
+        btncarregarCampo.setBackground(new java.awt.Color(241, 255, 129));
         btncarregarCampo.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btncarregarCampo.setForeground(new java.awt.Color(255, 255, 255));
+        btncarregarCampo.setForeground(new java.awt.Color(0, 0, 0));
         btncarregarCampo.setText("Carregar Campos");
         btncarregarCampo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,9 +154,9 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btncarregarCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 520, 160, 35));
 
-        btnLimpar.setBackground(new java.awt.Color(205, 133, 63));
-        btnLimpar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnLimpar.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpar.setBackground(new java.awt.Color(241, 255, 129));
+        btnLimpar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,7 +165,18 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 80, 35));
 
-        jLabel_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
+        btnSair.setBackground(new java.awt.Color(241, 255, 129));
+        btnSair.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnSair.setForeground(new java.awt.Color(0, 0, 0));
+        btnSair.setText("Sair");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 450, 80, 35));
+
+        jLabel_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
         getContentPane().add(jLabel_background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
         pack();
@@ -195,6 +213,11 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         limparCampos();
     }//GEN-LAST:event_btnLimparActionPerformed
 
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        /*Configuração Dispose, para que quando o usuário clicar no botão sair, ele não feche todas as telas*/
+        dispose();
+    }//GEN-LAST:event_btnSairActionPerformed
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -209,6 +232,7 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnLimpar;
+    private javax.swing.JButton btnSair;
     private javax.swing.JButton btncarregarCampo;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -246,7 +270,7 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
 
         /*Estou instanciando a classe atnDAO*/
         atnDAO objatndao = new atnDAO();
-        /*Passando o objeto objcadprodutodto por parametro com seus respectivos dados*/
+        /*Passando o objeto objcadcliente por parametro com seus respectivos dados*/
         objatndao.cadclienteDAO(objcadcliente);
 
     }
@@ -345,7 +369,7 @@ public class atn_cadclienteVIEW extends javax.swing.JFrame {
         /*Criação da variavel do tipo int para coletar informações do campo Id_cliente*/
         int id_cliente;
 
-        /*Estou convertendo o valor do campo txtId_cliente(String) para Inteiro*/
+        /*Estou convertendo o valor do campo txtId(String) para Inteiro*/
         id_cliente = Integer.parseInt(txtId.getText());
 
         /*Instanciando a classe atn_cadclienteDTO*/

@@ -49,12 +49,13 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel_Data.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel_Data.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Data.setText("Data:");
         getContentPane().add(jLabel_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
-        btnAdd.setBackground(new java.awt.Color(0, 206, 209));
+        btnAdd.setBackground(new java.awt.Color(241, 255, 129));
         btnAdd.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdd.setForeground(new java.awt.Color(0, 0, 0));
         btnAdd.setText("Adicionar");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,11 +65,13 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 100, 30));
 
         jLabel_Produto.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel_Produto.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Produto.setText("Produto:");
         getContentPane().add(jLabel_Produto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 84, -1));
         getContentPane().add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 100, 30));
 
         jLabel_Quantidade.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel_Quantidade.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Quantidade.setText("Quantidade:");
         getContentPane().add(jLabel_Quantidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, -1));
 
@@ -80,6 +83,7 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         getContentPane().add(txtQntd, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 100, 30));
 
         jLabel_Cod.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        jLabel_Cod.setForeground(new java.awt.Color(0, 0, 0));
         jLabel_Cod.setText("Cod.Prod.:");
         getContentPane().add(jLabel_Cod, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, -1));
 
@@ -91,9 +95,9 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         getContentPane().add(txtCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 100, 30));
         getContentPane().add(txtProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 140, 30));
 
-        btnLimpar.setBackground(new java.awt.Color(205, 133, 63));
+        btnLimpar.setBackground(new java.awt.Color(241, 255, 129));
         btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnLimpar.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,9 +106,9 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 100, 30));
 
-        btnVoltar.setBackground(new java.awt.Color(153, 153, 153));
+        btnVoltar.setBackground(new java.awt.Color(241, 255, 129));
         btnVoltar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        btnVoltar.setForeground(new java.awt.Color(0, 0, 0));
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,7 +117,7 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 100, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 270));
 
         pack();
@@ -189,7 +193,7 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
             
             /*Preparando a conexão e enviando o comando, através da String sql para fazer a insersão dos dados*/
             pstm = conn.prepareStatement(sqli);
-            /*aqui estou passando os valores através da variavel data,produto, quantidade para os respectivos valores(?)*/
+            /*aqui estou passando os valores através da variavel data, produto, quantidade para os respectivos valores(?)*/
             pstm.setString(1, data);
             pstm.setString(2, produto);
             pstm.setString(3, quantidades);
