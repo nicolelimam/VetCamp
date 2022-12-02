@@ -372,8 +372,8 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
         objcadfornecedordto.setId_fornecedor(id_fornecedor);
         objcadfornecedordto.setNome(nome_fornecedor);
         objcadfornecedordto.setCnpj(cnpj_fornecedor);
-        objcadfornecedordto.setEndereco(cnpj_fornecedor);
-        objcadfornecedordto.setTelefone(nome_fornecedor);
+        objcadfornecedordto.setEndereco(endereco_fornecedor);
+        objcadfornecedordto.setTelefone(telefone_fornecedor);
         objcadfornecedordto.setEmail(email_fornecedor);
         
         /*Instanciando a classe admDAO*/
