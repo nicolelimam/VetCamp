@@ -50,39 +50,33 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
         btnAlterar = new javax.swing.JButton();
         btncarregarCampo = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
-        btnSair = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Animais");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel_dados.setBackground(new java.awt.Color(204, 255, 102));
-        jPanel_dados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12))); // NOI18N
+        jPanel_dados.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel_dados.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12))); // NOI18N
         jPanel_dados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Proprietário:");
         jPanel_dados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Nome:");
         jPanel_dados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Idade:");
         jPanel_dados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Categoria:");
         jPanel_dados.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("Descrição:");
         jPanel_dados.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
         jPanel_dados.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 250, 30));
@@ -90,13 +84,17 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
         jPanel_dados.add(txtDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 250, 30));
         jPanel_dados.add(txtCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 120, 30));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("Sexo:");
         jPanel_dados.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, -1, -1));
 
-        cbxCliente.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        cbxCliente.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         cbxCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione" }));
+        cbxCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxClienteActionPerformed(evt);
+            }
+        });
         jPanel_dados.add(cbxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 130, 30));
 
         txtId.setEditable(false);
@@ -136,11 +134,10 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 580, 430));
 
-        btnCadastrar.setBackground(new java.awt.Color(0, 204, 51));
+        btnCadastrar.setBackground(new java.awt.Color(50, 205, 50));
         btnCadastrar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrar.setText("Salvar");
-        btnCadastrar.setBorder(null);
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadastrarActionPerformed(evt);
@@ -148,11 +145,10 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 80, 35));
 
-        btnExcluir.setBackground(new java.awt.Color(255, 51, 51));
+        btnExcluir.setBackground(new java.awt.Color(240, 72, 66));
         btnExcluir.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnExcluir.setForeground(new java.awt.Color(255, 255, 255));
         btnExcluir.setText("Excluir");
-        btnExcluir.setBorder(null);
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExcluirActionPerformed(evt);
@@ -160,9 +156,9 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 90, 35));
 
-        btnAlterar.setBackground(new java.awt.Color(241, 255, 129));
+        btnAlterar.setBackground(new java.awt.Color(30, 144, 255));
         btnAlterar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnAlterar.setForeground(new java.awt.Color(0, 0, 0));
+        btnAlterar.setForeground(new java.awt.Color(255, 255, 255));
         btnAlterar.setText("Editar");
         btnAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,9 +167,9 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 470, 90, 35));
 
-        btncarregarCampo.setBackground(new java.awt.Color(241, 255, 129));
+        btncarregarCampo.setBackground(new java.awt.Color(0, 206, 209));
         btncarregarCampo.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btncarregarCampo.setForeground(new java.awt.Color(0, 0, 0));
+        btncarregarCampo.setForeground(new java.awt.Color(255, 255, 255));
         btncarregarCampo.setText("Carregar Campos");
         btncarregarCampo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,9 +178,9 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btncarregarCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 500, 160, 35));
 
-        btnLimpar.setBackground(new java.awt.Color(241, 255, 129));
-        btnLimpar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
+        btnLimpar.setBackground(new java.awt.Color(205, 133, 63));
+        btnLimpar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnLimpar.setForeground(new java.awt.Color(255, 255, 255));
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,18 +189,7 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 80, 35));
 
-        btnSair.setBackground(new java.awt.Color(241, 255, 129));
-        btnSair.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnSair.setForeground(new java.awt.Color(0, 0, 0));
-        btnSair.setText("Sair");
-        btnSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 510, 90, 35));
-
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
         pack();
@@ -241,10 +226,9 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
         limparCampos();
     }//GEN-LAST:event_btnLimparActionPerformed
 
-    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-        /*Configuração Dispose, para que quando o usuário clicar no botão sair, ele não feche todas as telas*/
-        dispose();
-    }//GEN-LAST:event_btnSairActionPerformed
+    private void cbxClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbxClienteActionPerformed
 
     public static void main(String args[]) {
         
@@ -261,7 +245,6 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnLimpar;
-    private javax.swing.JButton btnSair;
     private javax.swing.JButton btncarregarCampo;
     private javax.swing.JComboBox<String> cbxCliente;
     private javax.swing.JLabel jLabel2;
