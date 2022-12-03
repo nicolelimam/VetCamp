@@ -64,11 +64,11 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         setTitle("Vendas");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Panel_dados.setBackground(new java.awt.Color(204, 255, 102));
-        Panel_dados.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Panel_dados.setBackground(new java.awt.Color(255, 255, 255));
+        Panel_dados.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         Panel_dados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel1.setText("Cod. Prod.:");
         Panel_dados.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 20));
 
@@ -79,7 +79,7 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         });
         Panel_dados.add(txtCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 90, 30));
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel10.setText("Nome Prod.:");
         Panel_dados.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, 20));
         Panel_dados.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 100, 30));
@@ -91,26 +91,27 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         });
         Panel_dados.add(spnQntd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 50, 30));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel11.setText("Qntd:");
         Panel_dados.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, 20));
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel12.setText("Preço:");
         Panel_dados.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, 20));
 
         txtPreco.setEditable(false);
         Panel_dados.add(txtPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 90, 30));
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel13.setText("Valor:");
         Panel_dados.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, 20));
 
         txtValor.setEditable(false);
         Panel_dados.add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 80, 30));
 
-        btnAdicionar.setBackground(new java.awt.Color(241, 255, 129));
+        btnAdicionar.setBackground(new java.awt.Color(0, 206, 209));
         btnAdicionar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnAdicionar.setForeground(new java.awt.Color(255, 255, 255));
         btnAdicionar.setText("Adicionar");
         btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +121,7 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         Panel_dados.add(btnAdicionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, 110, 40));
         Panel_dados.add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 80, 30));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Data:");
         Panel_dados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, 20));
 
@@ -174,17 +175,18 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 310, 290, 250));
 
-        btnRealizarVenda.setBackground(new java.awt.Color(241, 255, 129));
+        btnRealizarVenda.setBackground(new java.awt.Color(147, 112, 219));
         btnRealizarVenda.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnRealizarVenda.setForeground(new java.awt.Color(255, 255, 255));
         btnRealizarVenda.setText("Realizar Venda");
         btnRealizarVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRealizarVendaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRealizarVenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 250, 230, 40));
+        getContentPane().add(btnRealizarVenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 250, 190, 40));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BACKGROUND-3.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
         pack();
