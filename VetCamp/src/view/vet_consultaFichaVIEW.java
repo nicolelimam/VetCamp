@@ -171,7 +171,7 @@ public class vet_consultaFichaVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnCarregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 400, 110, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/backgroundGeral (1).png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/backgroundGeral.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 460));
 
         pack();
