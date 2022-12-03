@@ -57,14 +57,14 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
         MenuPrincipal.setBackground(new java.awt.Color(204, 204, 204));
-        MenuPrincipal.setForeground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         MenuPrincipal.setPreferredSize(new java.awt.Dimension(500, 30));
 
         jMCadastro.setText("Cadastro");
-        jMCadastro.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        jMCadastro.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMCadastro.setPreferredSize(new java.awt.Dimension(100, 19));
 
+        jmFornecedor.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jmFornecedor.setText("Fornecedor");
         jmFornecedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +73,7 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
         });
         jMCadastro.add(jmFornecedor);
 
+        jmProduto.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jmProduto.setText("Produto");
         jmProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +82,8 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
         });
         jMCadastro.add(jmProduto);
 
-        jmUsuario.setText("Usuario");
+        jmUsuario.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jmUsuario.setText("Usuário");
         jmUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmUsuarioActionPerformed(evt);
@@ -92,7 +94,7 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
         MenuPrincipal.add(jMCadastro);
 
         jMEstoque.setText("Estoque");
-        jMEstoque.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        jMEstoque.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMEstoque.setPreferredSize(new java.awt.Dimension(100, 19));
         jMEstoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +102,7 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
             }
         });
 
+        jmES.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jmES.setText("Entrada e Saída");
         jmES.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,9 +114,10 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
         MenuPrincipal.add(jMEstoque);
 
         jMFinanceiro.setText("Financeiro");
-        jMFinanceiro.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        jMFinanceiro.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMFinanceiro.setPreferredSize(new java.awt.Dimension(100, 19));
 
+        jmControleCaixa.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jmControleCaixa.setText("Controle de Caixa");
         jmControleCaixa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,10 +129,11 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
         MenuPrincipal.add(jMFinanceiro);
 
         jMRelatorio.setText("Relatórios");
-        jMRelatorio.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        jMRelatorio.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMRelatorio.setPreferredSize(new java.awt.Dimension(100, 19));
 
-        jmVendas.setText("Venda");
+        jmVendas.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jmVendas.setText("Vendas");
         jmVendas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmVendasActionPerformed(evt);
@@ -139,9 +144,8 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
         MenuPrincipal.add(jMRelatorio);
 
         jMSair.setBackground(new java.awt.Color(204, 204, 204));
-        jMSair.setForeground(new java.awt.Color(0, 0, 0));
         jMSair.setText("Sair");
-        jMSair.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        jMSair.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMSair.setPreferredSize(new java.awt.Dimension(100, 19));
         jMSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,6 +153,7 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
             }
         });
 
+        jmExit.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jmExit.setText("Fechar o Sistema");
         jmExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,6 +165,8 @@ public class adm_telaprincipalVIEW extends javax.swing.JFrame {
         MenuPrincipal.add(jMSair);
 
         setJMenuBar(MenuPrincipal);
+
+        getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
