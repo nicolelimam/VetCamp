@@ -29,14 +29,14 @@
     <Container class="javax.swing.JPanel" name="jPanel_dados">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="66" green="ff" red="cc" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder position="2">
               <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder>
-                  <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                  <Color PropertyName="color" blue="cc" green="cc" red="cc" type="rgb"/>
                 </LineBorder>
               </Border>
               <Font PropertyName="font" name="Dialog" size="12" style="0"/>
@@ -71,7 +71,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="13" style="1"/>
+              <Font name="Liberation Sans" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Data:"/>
           </Properties>
@@ -84,7 +84,7 @@
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="13" style="1"/>
+              <Font name="Liberation Sans" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Descri&#xe7;&#xe3;o:"/>
           </Properties>
@@ -97,7 +97,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="13" style="1"/>
+              <Font name="Liberation Sans" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Categoria:"/>
           </Properties>
@@ -124,7 +124,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="13" style="1"/>
+              <Font name="Liberation Sans" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="ID"/>
           </Properties>
@@ -147,7 +147,7 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="13" style="1"/>
+              <Font name="Liberation Sans" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nome:"/>
           </Properties>
@@ -174,7 +174,7 @@
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="13" style="1"/>
+              <Font name="Liberation Sans" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Veterin&#xe1;rio:"/>
           </Properties>
@@ -187,7 +187,7 @@
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="13" style="1"/>
+              <Font name="Liberation Sans" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sexo:"/>
           </Properties>
@@ -210,7 +210,7 @@
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="13" style="1"/>
+              <Font name="Liberation Sans" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Tipo:"/>
           </Properties>
@@ -252,10 +252,13 @@
     <Component class="javax.swing.JButton" name="btnCadastrar">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="81" green="ff" red="f1" type="rgb"/>
+          <Color blue="db" green="70" red="93" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Liberation Sans" size="13" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Agendar"/>
       </Properties>
@@ -271,10 +274,13 @@
     <Component class="javax.swing.JButton" name="btnAlterar">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="81" green="ff" red="f1" type="rgb"/>
+          <Color blue="ff" green="90" red="1e" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Liberation Sans" size="13" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Editar"/>
       </Properties>
@@ -290,10 +296,13 @@
     <Component class="javax.swing.JButton" name="btncarregarCampo">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="81" green="ff" red="f1" type="rgb"/>
+          <Color blue="d1" green="ce" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Liberation Sans" size="13" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Carregar"/>
       </Properties>
@@ -392,10 +401,13 @@
     <Component class="javax.swing.JButton" name="btnLimpar">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="81" green="ff" red="f1" type="rgb"/>
+          <Color blue="3f" green="85" red="cd" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Liberation Sans" size="13" style="1"/>
+          <Font name="Liberation Sans" size="12" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Limpar"/>
       </Properties>
@@ -411,7 +423,7 @@
     <Component class="javax.swing.JLabel" name="background">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/image/BACKGROUND-3.jpg"/>
+          <Image iconType="3" name="/image/background.png"/>
         </Property>
       </Properties>
       <Constraints>
