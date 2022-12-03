@@ -33,14 +33,14 @@ public class atn_telaprincipalVIEW extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/template66.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 570));
 
-        MenuPrincipal.setBackground(new java.awt.Color(255, 255, 255));
-        MenuPrincipal.setForeground(new java.awt.Color(0, 0, 0));
+        MenuPrincipal.setBackground(new java.awt.Color(204, 204, 204));
         MenuPrincipal.setPreferredSize(new java.awt.Dimension(500, 30));
 
         jMenu1.setText("Cadastro");
-        jMenu1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenu1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMenu1.setPreferredSize(new java.awt.Dimension(100, 19));
 
+        jMenuItem2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jMenuItem2.setText("Animal");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,6 +49,7 @@ public class atn_telaprincipalVIEW extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem2);
 
+        jMenuItem1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jMenuItem1.setText("Cliente");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,7 +61,7 @@ public class atn_telaprincipalVIEW extends javax.swing.JFrame {
         MenuPrincipal.add(jMenu1);
 
         jMenu2.setText("Agenda");
-        jMenu2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenu2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMenu2.setPreferredSize(new java.awt.Dimension(100, 19));
         jMenu2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +69,7 @@ public class atn_telaprincipalVIEW extends javax.swing.JFrame {
             }
         });
 
+        jMenuItem11.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jMenuItem11.setText("Agendamento");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,9 +81,10 @@ public class atn_telaprincipalVIEW extends javax.swing.JFrame {
         MenuPrincipal.add(jMenu2);
 
         jMenu8.setText("Caixa");
-        jMenu8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenu8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMenu8.setPreferredSize(new java.awt.Dimension(100, 19));
 
+        jMenuItem10.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jMenuItem10.setText("Venda");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +96,7 @@ public class atn_telaprincipalVIEW extends javax.swing.JFrame {
         MenuPrincipal.add(jMenu8);
 
         jMenu9.setText("Sair");
-        jMenu9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenu9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMenu9.setPreferredSize(new java.awt.Dimension(100, 19));
         jMenu9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +104,7 @@ public class atn_telaprincipalVIEW extends javax.swing.JFrame {
             }
         });
 
+        jMenuItem13.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jMenuItem13.setText("Fechar o Sistema");
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
