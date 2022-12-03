@@ -70,7 +70,7 @@ public class LoginVIEW extends javax.swing.JFrame {
         jLabel2.setText("Senha:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, -1, 20));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Login.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Prot - Tela de Login.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 500));
 
         pack();
