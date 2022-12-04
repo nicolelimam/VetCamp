@@ -19,7 +19,7 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
 
     /*Criação das variaveis do tipo String e Int*/
     String nome, quantidade;
-    int cod;
+    int cod, resultado;
 
     Connection conn; /*A variavel conn é um objeto criado para trabalhar com a classe Connection*/
     PreparedStatement pstm; /*A variavel pstm é um objeto criado para trabalhar com a classe PreparedStatement*/
@@ -65,31 +65,31 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
 
         jLabel_Produto.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         jLabel_Produto.setText("Produto:");
-        getContentPane().add(jLabel_Produto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 84, -1));
+        getContentPane().add(jLabel_Produto, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 84, -1));
         getContentPane().add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 100, 30));
 
         jLabel_Quantidade.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         jLabel_Quantidade.setText("Quantidade:");
-        getContentPane().add(jLabel_Quantidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, -1));
+        getContentPane().add(jLabel_Quantidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, -1, -1));
 
         txtQntd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtQntdActionPerformed(evt);
             }
         });
-        getContentPane().add(txtQntd, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 100, 30));
+        getContentPane().add(txtQntd, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 140, 30));
 
         jLabel_Cod.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         jLabel_Cod.setText("Cod.Prod.:");
-        getContentPane().add(jLabel_Cod, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, -1));
+        getContentPane().add(jLabel_Cod, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
         txtCod.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtCodKeyPressed(evt);
             }
         });
-        getContentPane().add(txtCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 100, 30));
-        getContentPane().add(txtProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 140, 30));
+        getContentPane().add(txtCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 100, 30));
+        getContentPane().add(txtProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 140, 30));
 
         btnLimpar.setBackground(new java.awt.Color(205, 133, 63));
         btnLimpar.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
@@ -111,7 +111,7 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
                 btnVoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 100, 30));
+        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 210, 100, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 270));
@@ -166,7 +166,11 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
     /*Método privado do tipo void, criado para pegar os valores respectivos e fazer a inserção no banco */
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
 
-        /*Criação das variaveis do tipo int*/
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            /*Criação das variaveis do tipo int*/
         /*a variavel qntd, ela pega e converte para inteiro o valor do campo txtQntd e variavel quant ela pega e converte o valor da variavel quantidade(variavel que armazena o valor vindo do banc no metodo anterior)*/
         int qntd = Integer.parseInt(txtQntd.getText());
         int quant = Integer.parseInt(quantidade);
@@ -198,6 +202,9 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
             pstm.execute();
             /*Aqui fecho a conexão*/
             pstm.close();
+            
+            JOptionPane.showMessageDialog(null, "Produto adicionado!");
+            
 
         } catch (Exception e) {
 
@@ -229,6 +236,12 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         /*Configuração Dispose, para que quando o usuário clicar no botão sair, ele não feche todas as telas*/
         /*Após os procedimentos, ele fecha*/
         dispose();
+        
+        
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
+        
 
     }//GEN-LAST:event_btnAddActionPerformed
 

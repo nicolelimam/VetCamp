@@ -32,7 +32,7 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
     ResultSet rs; /*A variavel rs é um objeto criado para trabalhar com a classe ResutlSet, que trará algum registro do Banco de Dados*/
     
     /*Criação da variavel do tipo int*/
-    int set;
+    int set, resultado;
 
    
     @SuppressWarnings("unchecked")
@@ -314,59 +314,67 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
 
     
     private void btnFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarActionPerformed
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         
-        /*Criação das variaveis do tipo String*/
-        String nome, idade, sexo, categoria, descricao, prescricao;
+        if(resultado == JOptionPane.YES_OPTION){
+            /*Criação das variaveis do tipo String*/
+            String nome, idade, sexo, categoria, descricao, prescricao;
 
-        nome = txtNome.getText();
-        idade = txtIdade.getText();
-        sexo = txtSexo.getText();
-        categoria = txtCategoria.getText();
-        descricao = txtDescricao.getText();
-        prescricao = txtPrescricao.getText();
+            nome = txtNome.getText();
+            idade = txtIdade.getText();
+            sexo = txtSexo.getText();
+            categoria = txtCategoria.getText();
+            descricao = txtDescricao.getText();
+            prescricao = txtPrescricao.getText();
+
+            /*Estou instanciando a classe vet_atendimentoDTO*/
+            vet_atendimentoDTO objatendimento = new vet_atendimentoDTO();
+            /*Estou passando os valores armazanedos nas variaveis locais, para o objatendimento através dos setters*/
+            objatendimento.setNome(nome);
+            objatendimento.setIdade(idade);
+            objatendimento.setSexo(sexo);
+            objatendimento.setCategoria(categoria);
+            objatendimento.setDescricao(descricao);
+            objatendimento.setPrescricao(prescricao);
+
+            /*Estou instanciando a classe vetDAO*/
+            vetDAO objvet = new vetDAO();
+            /*Passando o objeto objatendimento por parametro com seus respectivos dados*/
+            objvet.cadFicha(objatendimento);
+
+            /*Estou passando o comando sql através da String sql, e os valores com um ponto de interrogação, por que não sei o que o usuário vai inserir*/
+            String sql = "DELETE FROM atn_agenda where id_agenda = ?";
+
+            conn = new conexaoDAO().conectaBD();
+
+            try {
+
+                /*Preparando a conexão e enviando o comando, através da String sql para fazer a insersão dos dados*/
+                pstm = conn.prepareStatement(sql);
+                /*aqui estou passando os valores através da variavel set, cod para os respectivos valores(?)*/
+                pstm.setInt(1, set);
+
+                /*Aqui executo o comando sql*/
+                pstm.execute();
+                /*Aqui fecho a conexão*/
+                pstm.close();
+
+            } catch (Exception erro) {
+
+                JOptionPane.showInternalMessageDialog(null, "vet_telaprincipal - deletarRegistro: " + erro);
+
+            }
+
+            /*Chamada dos métodos e escondendo o painel Ficha do usuario*/
+            listarAgenda();
+
+            panelFicha.setVisible(false);
         
-        /*Estou instanciando a classe vet_atendimentoDTO*/
-        vet_atendimentoDTO objatendimento = new vet_atendimentoDTO();
-        /*Estou passando os valores armazanedos nas variaveis locais, para o objatendimento através dos setters*/
-        objatendimento.setNome(nome);
-        objatendimento.setIdade(idade);
-        objatendimento.setSexo(sexo);
-        objatendimento.setCategoria(categoria);
-        objatendimento.setDescricao(descricao);
-        objatendimento.setPrescricao(prescricao);
-        
-        /*Estou instanciando a classe vetDAO*/
-        vetDAO objvet = new vetDAO();
-        /*Passando o objeto objatendimento por parametro com seus respectivos dados*/
-        objvet.cadFicha(objatendimento);
-        
-        /*Estou passando o comando sql através da String sql, e os valores com um ponto de interrogação, por que não sei o que o usuário vai inserir*/
-        String sql = "DELETE FROM atn_agenda where id_agenda = ?";
-
-        conn = new conexaoDAO().conectaBD();
-
-        try {
-            
-            /*Preparando a conexão e enviando o comando, através da String sql para fazer a insersão dos dados*/
-            pstm = conn.prepareStatement(sql);
-            /*aqui estou passando os valores através da variavel set, cod para os respectivos valores(?)*/
-            pstm.setInt(1, set);
-
-            /*Aqui executo o comando sql*/
-            pstm.execute();
-            /*Aqui fecho a conexão*/
-            pstm.close();
-
-        } catch (Exception erro) {
-
-            JOptionPane.showInternalMessageDialog(null, "vet_telaprincipal - deletarRegistro: " + erro);
-
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
         }
         
-        /*Chamada dos métodos e escondendo o painel Ficha do usuario*/
-        listarAgenda();
-        
-        panelFicha.setVisible(false);
 
     }//GEN-LAST:event_btnFinalizarActionPerformed
 

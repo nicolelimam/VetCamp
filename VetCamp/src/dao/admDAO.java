@@ -234,7 +234,7 @@ public class admDAO {
             /*Fecho a conexão*/
             pstm.close();
 
-            JOptionPane.showMessageDialog(null, "Cadstro concluído!");
+            JOptionPane.showMessageDialog(null, "Cadastro concluído!");
             /*Se der certo, exibe JOptionPane para mostrar ao usuário que o cadastro foi conclúido*/
 
         } catch (Exception erro) {
@@ -425,7 +425,7 @@ public class admDAO {
     public ResultSet listarFornecedor() {
 
         /*Estou passando o comando sql através da String sql*/
-        String sql = "SELECT id_fornecedor, nome_fornecedor FROM adm_fornecedor ORDER BY nome_fornecedor;";
+        String sql = "SELECT id_fornecedor, nome_fornecedor FROM adm_fornecedor;";
         conn = new conexaoDAO().conectaBD();
 
         /*Após a conexão, ele irá entrar no método try, pois irá "tentar" fazer algo, se não conseguir ele entra no catch*/

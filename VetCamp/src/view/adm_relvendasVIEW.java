@@ -15,8 +15,8 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
     
     public adm_relvendasVIEW() {
         initComponents();
-
         setLocationRelativeTo(null); /*Configuração para abertura da janela no centro da tela*/
+        saldoTotal.setVisible(false);
     }
 
     
@@ -151,6 +151,7 @@ public class adm_relvendasVIEW extends javax.swing.JFrame {
     public void calcularSaldo() {
         
         /*Criação da variavel do tipo double*/
+        saldoTotal.setVisible(true);
         double soma = 0;
         
         /*Utilizei o for, para pegar da tabelaVendas, na coluna 1, todos os registros de preços para fazer a soma*/

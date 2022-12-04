@@ -21,7 +21,8 @@ public class adm_cadprodutoVIEW extends javax.swing.JFrame {
         dadosComboBox(); /*Esta inicializando o método para listar os dados na combobox*/
         listarProduto();  /*Esta inicializando o método para listar os produtos*/
     }
-
+    
+    int resultado;
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -211,24 +212,42 @@ public class adm_cadprodutoVIEW extends javax.swing.JFrame {
     }//GEN-LAST:event_txtDataActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        /*Chamada de métodos*/
-        cadastrarProduto();
-        limparCampos();
-        listarProduto();
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            cadastrarProduto();
+            limparCampos();
+            listarProduto();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
-        /*Chamada de métodos*/
-        alterarDados();
-        limparCampos();
-        listarProduto();
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            alterarDados();
+            limparCampos();
+            listarProduto();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnAlterarActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-        /*Chamada de métodos*/
-        deletarDados();
-        limparCampos();
-        listarProduto();
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            deletarDados();
+            limparCampos();
+            listarProduto();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed

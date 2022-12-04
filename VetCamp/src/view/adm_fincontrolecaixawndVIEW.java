@@ -16,6 +16,8 @@ public class adm_fincontrolecaixawndVIEW extends javax.swing.JFrame {
         setLocationRelativeTo(null); /*Configuração para abertura da janela no centro da tela*/
     }
     
+    int resultado;
+    
     Connection conn; /*A variavel conn é um objeto criado para trabalhar com a classe Connection*/
     PreparedStatement pstm; /*A variavel pstm é um objeto criado para trabalhar com a classe PreparedStatement*/
     ResultSet rs; /*A variavel rs é um objeto criado para trabalhar com a classe ResutlSet, que trará algum registro do Banco de Dados*/
@@ -143,10 +145,16 @@ public class adm_fincontrolecaixawndVIEW extends javax.swing.JFrame {
     }//GEN-LAST:event_txtValorActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        /*Chamada de métodos*/
-        controleCaixa();
-        limparCampos();
-        dispose();
+       /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            controleCaixa();
+            limparCampos();
+            dispose();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed

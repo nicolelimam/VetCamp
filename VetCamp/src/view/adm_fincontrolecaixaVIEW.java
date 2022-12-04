@@ -25,6 +25,7 @@ public class adm_fincontrolecaixaVIEW extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaControl = new javax.swing.JTable();
         btninserirProdutos = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -61,7 +62,18 @@ public class adm_fincontrolecaixaVIEW extends javax.swing.JFrame {
                 btninserirProdutosActionPerformed(evt);
             }
         });
-        getContentPane().add(btninserirProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 80, 140, 40));
+        getContentPane().add(btninserirProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 80, 140, 40));
+
+        jButton1.setBackground(new java.awt.Color(0, 206, 209));
+        jButton1.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Carregar Campos");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 510, 140, 40));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
@@ -76,6 +88,11 @@ public class adm_fincontrolecaixaVIEW extends javax.swing.JFrame {
         objfincontrolecaixawnd.setVisible(true);
     }//GEN-LAST:event_btninserirProdutosActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        /*Chamada de métodos*/
+        listarControl();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     
     public static void main(String args[]) {
         
@@ -89,6 +106,7 @@ public class adm_fincontrolecaixaVIEW extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JButton btninserirProdutos;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabelaControl;
     // End of variables declaration//GEN-END:variables

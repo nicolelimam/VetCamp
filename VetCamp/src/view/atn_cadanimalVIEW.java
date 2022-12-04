@@ -24,6 +24,8 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
         listarAnimais(); /*Esta inicializando o método para listar os Animais*/
 
     }
+    
+    int resultado;
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -196,10 +198,16 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        /*Chamada de métodos*/
-        cadastrarAnimais();
-        listarAnimais();
-        carregarCampos();
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            cadastrarAnimais();
+            limparCampos();
+            listarAnimais();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btncarregarCampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncarregarCampoActionPerformed
@@ -208,17 +216,29 @@ public class atn_cadanimalVIEW extends javax.swing.JFrame {
     }//GEN-LAST:event_btncarregarCampoActionPerformed
 
     private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
-        /*Chamada de métodos*/
-        alterarDados();
-        listarAnimais();
-        limparCampos();
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            alterarDados();
+            limparCampos();
+            listarAnimais();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnAlterarActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-        /*Chamada de métodos*/
-        deletarDados();
-        limparCampos();
-        listarAnimais();
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            deletarDados();
+            limparCampos();
+            listarAnimais();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed

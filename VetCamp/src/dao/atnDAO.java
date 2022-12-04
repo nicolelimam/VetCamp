@@ -376,7 +376,7 @@ public class atnDAO {
             /*Fecho a conexão*/
             pstm.close();
 
-            JOptionPane.showMessageDialog(null, "Cadastro concluído!"); /*Se der certo, exibe JOptionPane para mostrar ao usuário que o cadastro foi conclúido*/
+            JOptionPane.showMessageDialog(null, "Agendamento concluído!"); /*Se der certo, exibe JOptionPane para mostrar ao usuário que o cadastro foi conclúido*/
 
         } catch (Exception erro) {
             JOptionPane.showMessageDialog(null, "atnDAO - cagendaDAO: " + erro); /*Se der errado, exibe JOptionPane para mostrar ao usuário que a insersão do registro de dados deu errado, e mostra qual o erro através da variavél erro*/

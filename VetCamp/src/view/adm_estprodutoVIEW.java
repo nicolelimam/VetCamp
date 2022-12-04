@@ -35,6 +35,7 @@ public class adm_estprodutoVIEW extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         tabelaEstoque = new javax.swing.JTable();
         jLabel_Entrada1 = new javax.swing.JLabel();
+        btnCarregar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -99,7 +100,7 @@ public class adm_estprodutoVIEW extends javax.swing.JFrame {
                 btnProdActionPerformed(evt);
             }
         });
-        getContentPane().add(btnProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 30, 140, 40));
+        getContentPane().add(btnProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 30, 140, 40));
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jScrollPane3.setBorder(null);
@@ -134,6 +135,17 @@ public class adm_estprodutoVIEW extends javax.swing.JFrame {
         jLabel_Entrada1.setText("Entrada");
         getContentPane().add(jLabel_Entrada1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
 
+        btnCarregar.setBackground(new java.awt.Color(0, 206, 209));
+        btnCarregar.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        btnCarregar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCarregar.setText("Carregar");
+        btnCarregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCarregarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCarregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 30, 140, 40));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 600));
 
@@ -147,6 +159,13 @@ public class adm_estprodutoVIEW extends javax.swing.JFrame {
         obj.setVisible(true);
     }//GEN-LAST:event_btnProdActionPerformed
 
+    private void btnCarregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCarregarActionPerformed
+        /*Chamada de métodos*/
+        listarEstoque();
+        listarProduto();
+        listarProdutoEs();
+    }//GEN-LAST:event_btnCarregarActionPerformed
+
     
     public static void main(String args[]) {
         
@@ -159,6 +178,7 @@ public class adm_estprodutoVIEW extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
+    private javax.swing.JButton btnCarregar;
     private javax.swing.JButton btnProd;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel_Entrada;
@@ -173,7 +193,7 @@ public class adm_estprodutoVIEW extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     /*Método privado do tipo void para atualizar a tabela entrada*/
-    private void listarProduto() {
+    public void listarProduto() {
 
         try {
 

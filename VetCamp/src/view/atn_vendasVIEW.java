@@ -15,6 +15,7 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
     public atn_vendasVIEW() {
         initComponents();
         setLocationRelativeTo(null); /*Configuração para abertura da janela no centro da tela*/
+        txtCod.setVisible(false);
     }
 
     Connection conn;
@@ -26,7 +27,7 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
     
     /*Criação das variaveis do tipo String e Int*/
     int code, cod, qntdS;
-    String vt, dt, total;
+    String vt, dt, total, nome;
 
     
     @SuppressWarnings("unchecked")
@@ -35,9 +36,8 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
 
         Panel_dados = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        txtCod = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
         txtNome = new javax.swing.JTextField();
+        txtCod = new javax.swing.JTextField();
         spnQntd = new javax.swing.JSpinner();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -62,6 +62,7 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Vendas");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Panel_dados.setBackground(new java.awt.Color(255, 255, 255));
@@ -69,31 +70,29 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         Panel_dados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jLabel1.setText("Cod. Prod.:");
+        jLabel1.setText("Nome Prod.");
         Panel_dados.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 20));
 
-        txtCod.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtNome.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtCodKeyPressed(evt);
+                txtNomeKeyPressed(evt);
             }
         });
-        Panel_dados.add(txtCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 90, 30));
+        Panel_dados.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 90, 30));
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jLabel10.setText("Nome Prod.:");
-        Panel_dados.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, 20));
-        Panel_dados.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 100, 30));
+        txtCod.setEditable(false);
+        Panel_dados.add(txtCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 50, 30));
 
         spnQntd.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 spnQntdStateChanged(evt);
             }
         });
-        Panel_dados.add(spnQntd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 50, 30));
+        Panel_dados.add(spnQntd, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 50, 30));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel11.setText("Qntd:");
-        Panel_dados.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, 20));
+        Panel_dados.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, 20));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel12.setText("Preço:");
@@ -119,11 +118,11 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
             }
         });
         Panel_dados.add(btnAdicionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, 110, 40));
-        Panel_dados.add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 80, 30));
+        Panel_dados.add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 80, 30));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Data:");
-        Panel_dados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, 20));
+        Panel_dados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, 20));
 
         getContentPane().add(Panel_dados, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 610, 170));
 
@@ -140,18 +139,31 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Cod. Prod.", "Nome Prod.", "Quantia", "Preço", "Valor"
+                "Nome Prod.", "Quantia", "Preço", "Valor"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
         jScrollPane1.setViewportView(tabelaVenda);
+        if (tabelaVenda.getColumnModel().getColumnCount() > 0) {
+            tabelaVenda.getColumnModel().getColumn(0).setResizable(false);
+            tabelaVenda.getColumnModel().getColumn(1).setResizable(false);
+            tabelaVenda.getColumnModel().getColumn(2).setResizable(false);
+            tabelaVenda.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 610, 350));
 
@@ -192,40 +204,43 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 /*Método privado do tipo void, criado para coletar informações sobre o produto selecionado pelo usuario*/
-    private void txtCodKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodKeyPressed
+    private void txtNomeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNomeKeyPressed
         /*Toda vez que o usuario pressionar a tecla enter, ele entra no if*/
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             
-            /*Estou convertendo o valor do campo txtCod(String) para Inteiro*/
-            code = Integer.parseInt(txtCod.getText());
+            /*Estou coletando o valor inserido pelo usuário*/
+           
+            nome = txtNome.getText();
             
             /*Estou passando o comando sql através da String sql, e os valores com um ponto de interrogação, por que não sei o que o usuário vai inserir*/
-            String sql = "select nome_produto, preco_venda from adm_produto where id_produto = ?";
+            String sql = "select id_produto, preco_venda from adm_produto where nome_produto = ?";
             conn = new conexaoDAO().conectaBD();
 
             try {
                 
                 pstm = conn.prepareStatement(sql);
-                pstm.setInt(1, code);
+                pstm.setString(1, nome);
                 rs = pstm.executeQuery();
 
                 if (rs.next() == false) {
                     JOptionPane.showMessageDialog(null, "Produto não encontrado!");
                 } else {
                     /*Se houver o registro, ele armazena os resultados nas variaveis respectivas*/
-                    String nome, preco;
-                    nome = rs.getString("nome_produto");
+                    String preco;
+                    
+                    
                     preco = rs.getString("preco_venda");
-
-                    txtNome.setText(nome.trim());
+                    code = rs.getInt("id_produto");
+                    
                     txtPreco.setText(preco.trim());
+                    txtCod.setText(String.valueOf(code));
                 }
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "atn_vendasView - CodeKeyPressed: " + e);
             }
         }
 
-    }//GEN-LAST:event_txtCodKeyPressed
+    }//GEN-LAST:event_txtNomeKeyPressed
     
     private void spnQntdStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spnQntdStateChanged
         /*Estou pegando os valores da spinner(spnQntds) e o campo txtPreco, e multiplicando seus valores, e setando o resultado no campo txtValor*/
@@ -257,7 +272,7 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         model = (DefaultTableModel) tabelaVenda.getModel();
         /*Estou adicionando os registros na tabelaVenda*/
         model.addRow(new Object[]{
-            txtCod.getText(),
+            //txtCod.getText(),
             txtNome.getText(),
             spnQntd.getValue().toString(),
             txtPreco.getText(),
@@ -270,7 +285,7 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
          /*E a cada vez que um registro é adicionado a tabelaVendas, ele pega o valor da coluna 4, referente ao valor e soma*/
         /*Ele faz a soma enquanto haver produtos sendo adicionado a tabela*/
          for (int i = 0; i < tabelaVenda.getRowCount(); i++) {
-            soma = soma + Double.parseDouble(tabelaVenda.getValueAt(i, 4).toString());
+            soma = soma + Double.parseDouble(tabelaVenda.getValueAt(i, 3).toString());
         }
 
         txtTotal.setText(Double.toString(soma));
@@ -301,8 +316,10 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         
         /*Estou trazendo do banco de dados através do result set, as informações referentes ao produto*/
         String sqls = "Select quantidade_produto from adm_produto where id_produto = ?";
+        
         conn = new conexaoDAO().conectaBD();
-
+        code = Integer.parseInt(txtCod.getText());
+        
         try {
             pstm = conn.prepareStatement(sqls);
             pstm.setInt(1, code);
@@ -372,12 +389,12 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
         }
         
         /*Limpar os campos*/
-        txtCod.setText("");
         txtNome.setText("");
+        txtCod.setText("");
         txtPreco.setText("");
         txtValor.setText("");
         txtData.setText("");
-        txtCod.requestFocus();
+        txtNome.requestFocus();
     }//GEN-LAST:event_btnAdicionarActionPerformed
     
     /*Metodo publico do tipo void, para realizar o extrato da venda*/
@@ -398,9 +415,9 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
 
         for (int i = 0; i < model.getRowCount(); i++) {
 
-            String nomep = (String) model.getValueAt(i, 1);
-            String price = (String) model.getValueAt(i, 3);
-            String valor = (String) model.getValueAt(i, 4);
+            String nomep = (String) model.getValueAt(i, 0);
+            String price = (String) model.getValueAt(i, 2);
+            String valor = (String) model.getValueAt(i, 3);
 
             txtExtrato.setText(txtExtrato.getText() + nomep + "\t" + price + "\t" + valor + "\n");
         }
@@ -448,7 +465,6 @@ public class atn_vendasVIEW extends javax.swing.JFrame {
     private javax.swing.JButton btnAdicionar;
     private javax.swing.JButton btnRealizarVenda;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;

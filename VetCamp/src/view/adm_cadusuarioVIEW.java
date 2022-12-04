@@ -21,7 +21,8 @@ public class adm_cadusuarioVIEW extends javax.swing.JFrame {
         dadosComboBox(); /*Esta inicializando o método para listar os dados na combobox*/
         listarUsuario(); /*Esta inicializando o método para listar os usuarios*/
     }
-
+    
+    int resultado;
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -216,10 +217,16 @@ public class adm_cadusuarioVIEW extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        /*Chamada de métodos*/
-        cadastrarUsuario();
-        limparCampos();
-        listarUsuario();
+       /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            cadastrarUsuario();
+            limparCampos();
+            listarUsuario();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btncarregarCampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncarregarCampoActionPerformed
@@ -228,17 +235,29 @@ public class adm_cadusuarioVIEW extends javax.swing.JFrame {
     }//GEN-LAST:event_btncarregarCampoActionPerformed
 
     private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
-        /*Chamada de métodos*/
-        alterarDados();
-        limparCampos();
-        listarUsuario();
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            alterarDados();
+            limparCampos();
+            listarUsuario();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnAlterarActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-        /*Chamada de métodos*/
-        deletarDados();
-        limparCampos();
-        listarUsuario();
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            deletarDados();
+            limparCampos();
+            listarUsuario();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed

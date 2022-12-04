@@ -17,7 +17,8 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
         txtId.setVisible(false); /*Estou iniciando o campo txtId com a configuração para ele não ser vísivel ao usuário*/
         listarFornecedor(); /*Esta inicializando o método para listar os fornecedores*/
     }
-
+    
+    int resultado;
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -174,17 +175,29 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        /*Chamada de métodos*/
-        cadastrarFornecedor();
-        limparCampos();
-        listarFornecedor();
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            cadastrarFornecedor();
+            limparCampos();
+            listarFornecedor();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        /*Chamada de métodos*/
-        alteraFornecedor();
-        limparCampos();
-        listarFornecedor();
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            alteraFornecedor();
+            limparCampos();
+            listarFornecedor();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btncarregarCampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncarregarCampoActionPerformed
@@ -193,10 +206,16 @@ public class adm_cadfornecedorVIEW extends javax.swing.JFrame {
     }//GEN-LAST:event_btncarregarCampoActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-        /*Chamada de métodos*/
-        deletarDados();
-        limparCampos();
-        listarFornecedor();
+        /*Chamada de métodos e JOptionPane para confirmação de decisão*/
+        resultado = JOptionPane.showConfirmDialog(this, "Você tem certeza?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(resultado == JOptionPane.YES_OPTION){
+            deletarDados();
+            limparCampos();
+            listarFornecedor();
+        }else if(resultado == JOptionPane.NO_OPTION){
+            limparCampos();
+        }
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
