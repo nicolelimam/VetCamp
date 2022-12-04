@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 28/11/2022 às 21:29
--- Versão do servidor: 10.4.27-MariaDB
--- Versão do PHP: 7.4.33
+-- Tempo de geração: 04-Dez-2022 às 22:02
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,16 +24,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `adm_cargo`
+-- Estrutura da tabela `adm_cargo`
 --
 
 CREATE TABLE `adm_cargo` (
   `id_cargo` int(11) NOT NULL,
   `descricao` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Despejando dados para a tabela `adm_cargo`
+-- Extraindo dados da tabela `adm_cargo`
 --
 
 INSERT INTO `adm_cargo` (`id_cargo`, `descricao`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `adm_cargo` (`id_cargo`, `descricao`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `adm_control`
+-- Estrutura da tabela `adm_control`
 --
 
 CREATE TABLE `adm_control` (
@@ -54,23 +54,19 @@ CREATE TABLE `adm_control` (
   `descricao_control` varchar(150) NOT NULL,
   `valor_control` varchar(100) NOT NULL,
   `funcionario_control` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Despejando dados para a tabela `adm_control`
+-- Extraindo dados da tabela `adm_control`
 --
 
 INSERT INTO `adm_control` (`id_control`, `data_control`, `tipo_control`, `descricao_control`, `valor_control`, `funcionario_control`) VALUES
-(1, '18 / 09', 'Saída', 'Salários', '150.00', 'ligia'),
-(2, '', 'Entrada', 'Vendas', '7.4', 'Carlos'),
-(3, '', 'Entrada', 'Vendas', '11.100000000000001', 'Carlos'),
-(4, '', 'Entrada', 'Vendas', '11.100000000000001', 'Carlos'),
-(5, '', 'Entrada', 'Vendas', '18.5', 'Carlos');
+(1, '03/06', 'ALTI', 'Água, Luz, Telefone, Internet', '265.69', 'Cézar');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `adm_est`
+-- Estrutura da tabela `adm_est`
 --
 
 CREATE TABLE `adm_est` (
@@ -78,28 +74,12 @@ CREATE TABLE `adm_est` (
   `data_est` varchar(20) NOT NULL,
   `produto_est` varchar(11) NOT NULL,
   `quantidade` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `adm_est`
---
-
-INSERT INTO `adm_est` (`id_est`, `data_est`, `produto_est`, `quantidade`) VALUES
-(4, '19 / 09', 'Vermifugo', '10'),
-(5, '17/ 10', 'Medicamento', '13'),
-(6, '19 / 08', 'Vermifugo', '15'),
-(7, '15 / 09', 'Medicamento', '16'),
-(8, '19 / 7', 'Vermifugo', '17'),
-(9, '19 / 07', 'Pedgree', '3'),
-(11, '18 / 8', 'Racao', '2'),
-(15, '18 / 09', 'Medicamento', '17'),
-(16, '17 / 09', 'Vacina', '12'),
-(17, '14 / 06', 'Cortador', '7');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `adm_estsaida`
+-- Estrutura da tabela `adm_estsaida`
 --
 
 CREATE TABLE `adm_estsaida` (
@@ -107,31 +87,12 @@ CREATE TABLE `adm_estsaida` (
   `data_est` varchar(100) NOT NULL,
   `prod_est` varchar(100) NOT NULL,
   `quant_est` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `adm_estsaida`
---
-
-INSERT INTO `adm_estsaida` (`id_est`, `data_est`, `prod_est`, `quant_est`) VALUES
-(1, '16 / 08', 'Medicamento', '2'),
-(2, '12 / 09', 'Medicamento', '1'),
-(3, '12 / 08', 'Medicamento', '4'),
-(4, '18 / 09', 'Medicamento', '4'),
-(5, '19 / 9', 'Vacina', '5'),
-(6, '19/09', 'Vermifugo', '2'),
-(7, '18 / 09', 'Medicamento', '1'),
-(8, '18 / 09', 'Vacina', '2'),
-(9, '19 /8', 'Medicamento', '2'),
-(10, '18 / 08', 'Medicamento', '7'),
-(11, '17 /09', 'Medicamento', '3'),
-(12, '17 / 08', 'Medicamento', '3'),
-(13, '13 / 07', 'Medicamento', '5');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `adm_fornecedor`
+-- Estrutura da tabela `adm_fornecedor`
 --
 
 CREATE TABLE `adm_fornecedor` (
@@ -141,21 +102,22 @@ CREATE TABLE `adm_fornecedor` (
   `endereco_fornecedor` varchar(150) NOT NULL,
   `telefone_fornecedor` varchar(50) NOT NULL,
   `email_fornecedor` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Despejando dados para a tabela `adm_fornecedor`
+-- Extraindo dados da tabela `adm_fornecedor`
 --
 
 INSERT INTO `adm_fornecedor` (`id_fornecedor`, `nome_fornecedor`, `cnpj_fornecedor`, `endereco_fornecedor`, `telefone_fornecedor`, `email_fornecedor`) VALUES
-(1, 'Avifort', 'test 03', 'test 03', 'Avifort', 'aijais@'),
-(2, 'DogShow', 'teste01', 'teste01', 'DogShow', 'sjais@asa.com'),
-(3, 'PremierPet', 'asokaoa', 'asokaoa', 'PremierPet', 'ksako@oaksoa');
+(1, 'VetShop', '66.526.332/0002-36', 'Quartel Rodolfo Miranda', '(62) 3156-6985', 'vetshop@hotmart.com'),
+(2, 'DogShow', '56.885.562/0002-26', 'Rua Constantine Melo', '(11) 3565-6935', 'dogshowoficial@hotmail.com'),
+(3, 'PremierPet', '24.256.887/0001-35', 'Rua Domingo Pedro', '(24) 6599-2541', 'premierpet@eduzz.com'),
+(4, 'ShopCats', '56.998.324/0001-64', 'Rua Miau Arísco', '(12) 3569-4157', 'shopcatsofc@kultivi.com');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `adm_produto`
+-- Estrutura da tabela `adm_produto`
 --
 
 CREATE TABLE `adm_produto` (
@@ -166,42 +128,37 @@ CREATE TABLE `adm_produto` (
   `preco_unitario` varchar(50) NOT NULL,
   `preco_venda` varchar(50) NOT NULL,
   `fk_fornecedor` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Despejando dados para a tabela `adm_produto`
+-- Extraindo dados da tabela `adm_produto`
 --
 
 INSERT INTO `adm_produto` (`id_produto`, `nome_produto`, `quantidade_produto`, `validade_produto`, `preco_unitario`, `preco_venda`, `fk_fornecedor`) VALUES
-(1, 'Medicamento', '12', '13/10', '2.50', '3.70', 1),
-(2, 'Vacina', '12', '12/09', '2.50', '390', 1),
-(3, 'Vermifugo', '17', '18/04', '2;40', '2.90', 2),
-(4, 'Ração', '10', '14.05', '13.5', '17.5', 1),
-(5, 'Medicamento', '16', '13/10', '2.50', '3.70', 1),
-(6, 'Vermifugo', '9', '18/04', '2;40', '2.90', 2),
-(7, 'Remédios', '13', '12/07', '2.7', '5.6', 3),
-(8, 'Pedgree', '3', '18 / 08', '8.90', '13.40', 2),
-(9, 'Medicamento', '14', '13/10', '2.50', '3.70', 3),
-(10, 'Racao', '2', '12 / 07', '5.98', '8.90', 2),
-(11, 'Pedgree', '3', '18 / 08', '8.90', '13.40', 2),
-(12, 'Medicamento', '14', '13/10', '2.50', '3.70', 3),
-(13, 'Cortador', '12', '13 / 05', '3.50', '5.90', 3);
+(1, 'Analgésicos', '85', '13/02/23', '2.50', '3.70', 1),
+(2, 'Vacina', '54', '12/06/24', '2.50', '6.00', 2),
+(3, 'Cicatrizante', '69', '18/09/23', '2.40', '2.90', 3),
+(4, 'Ração Comum', '23', '14/03/23', '68.00', '80.00', 4),
+(5, 'Antipulgas e Carrapatos.', '65', '13/12/24', '2.50', '3.70', 1),
+(6, 'Antibióticos', '48', '18/12/22', '3.60', '4.20', 4),
+(7, 'Antissépticos', '65', '12/07/25', '15.25', '23.50', 3),
+(8, 'Ração Pedgree', '32', '23/02/23', '90.00', '124.00', 2);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `adm_servico`
+-- Estrutura da tabela `adm_servico`
 --
 
 CREATE TABLE `adm_servico` (
   `id_servico` int(11) NOT NULL,
   `descricao` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `adm_usuario`
+-- Estrutura da tabela `adm_usuario`
 --
 
 CREATE TABLE `adm_usuario` (
@@ -213,21 +170,21 @@ CREATE TABLE `adm_usuario` (
   `login_usuario` varchar(150) NOT NULL,
   `login_senha` varchar(150) NOT NULL,
   `fk_cargo` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Despejando dados para a tabela `adm_usuario`
+-- Extraindo dados da tabela `adm_usuario`
 --
 
 INSERT INTO `adm_usuario` (`id_usuario`, `nome_usuario`, `cpf_usuario`, `endereco_usuario`, `telefone_usuario`, `login_usuario`, `login_senha`, `fk_cargo`) VALUES
-(1, 'Mary', '400321', 'Rua Aloísio', '3144 6500', 'mary', '123', 3),
-(2, 'Ligia', '123456789', 'Rua 2', '3122 5342', 'ligia', '123', 1),
-(3, 'Carlos', '12345', 'Rua 01', '3144 54', 'Carlos', '123', 2);
+(1, 'Cézar Monteiro', '458.656.552-89', 'Rua Nárnia', '12 99856-2546', 'Cézar', '12345', 1),
+(2, 'Cornélia Almeida', '456.662.554-22', 'Rua Campo Minado', '12 99563-5624', 'Cornélia', '12345', 3),
+(3, 'Augusto Machado', '394.556.254-66', 'Rua Asgard', '12 96542-6977', 'Augusto', '12345', 2);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `atn_agenda`
+-- Estrutura da tabela `atn_agenda`
 --
 
 CREATE TABLE `atn_agenda` (
@@ -240,12 +197,19 @@ CREATE TABLE `atn_agenda` (
   `nome_animal` varchar(100) NOT NULL,
   `fk_animal` int(11) NOT NULL,
   `vet_agenda` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `atn_agenda`
+--
+
+INSERT INTO `atn_agenda` (`id_agenda`, `data_agenda`, `tipo_agenda`, `sexo_agenda`, `categoria_agenda`, `descricao_agenda`, `nome_animal`, `fk_animal`, `vet_agenda`) VALUES
+(2, '12/12/22', 'Exame', 'Macho', 'Cachorro', 'Hipertenso', 'Beto', 1, 'Cornélia');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `atn_animal`
+-- Estrutura da tabela `atn_animal`
 --
 
 CREATE TABLE `atn_animal` (
@@ -256,31 +220,32 @@ CREATE TABLE `atn_animal` (
   `descricao_animal` varchar(150) NOT NULL,
   `fk_cliente` int(11) NOT NULL,
   `categoria_animal` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Despejando dados para a tabela `atn_animal`
+-- Extraindo dados da tabela `atn_animal`
 --
 
 INSERT INTO `atn_animal` (`id_animal`, `nome_animal`, `idade_animal`, `sexo_animal`, `descricao_animal`, `fk_cliente`, `categoria_animal`) VALUES
-(1, 'Mel', '12', 'Femea', 'Cega', 1, 'Cao'),
-(2, 'Maricota', '5', 'Macho', 'Gato Bravo', 2, 'Gatinho');
+(1, 'Beto', '5', 'Macho', 'Hipertenso', 1, 'Cachorro'),
+(2, 'Petúnia', '3', 'Fêmea', 'Manca', 2, 'Gato'),
+(3, 'Moon', '7', 'Fêmea', 'Nenhuma', 2, 'Furão');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `atn_categoria`
+-- Estrutura da tabela `atn_categoria`
 --
 
 CREATE TABLE `atn_categoria` (
   `id_categoria` int(11) NOT NULL,
   `descricao` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `atn_cliente`
+-- Estrutura da tabela `atn_cliente`
 --
 
 CREATE TABLE `atn_cliente` (
@@ -289,20 +254,21 @@ CREATE TABLE `atn_cliente` (
   `cpf_cliente` varchar(50) NOT NULL,
   `endereco_cliente` varchar(150) NOT NULL,
   `telefone_cliente` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Despejando dados para a tabela `atn_cliente`
+-- Extraindo dados da tabela `atn_cliente`
 --
 
 INSERT INTO `atn_cliente` (`id_cliente`, `nome_cliente`, `cpf_cliente`, `endereco_cliente`, `telefone_cliente`) VALUES
-(1, 'Carlos Roberto', '12345678', 'Rua Federico Jose', '3144 5479'),
-(2, 'Zé Carlos', '12345678', 'Rua Federico Jose', '3144 5478');
+(1, 'Ana Carolina Macedo', '652.354.325-99', 'Rua Frederico José', '(24) 3144-5479'),
+(2, 'Jonathan Marcelo Capuzzi', '245.663.254-02', 'Rua Major Phillipin', '(24) 3156-8546'),
+(3, 'Danielle Matias Carmelita', '564.328.124-28', 'Rua Comerciante Drummond', '(31) 3694-2461');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `atn_vendas`
+-- Estrutura da tabela `atn_vendas`
 --
 
 CREATE TABLE `atn_vendas` (
@@ -311,33 +277,19 @@ CREATE TABLE `atn_vendas` (
   `prod_venda` varchar(100) NOT NULL,
   `quant_venda` varchar(50) NOT NULL,
   `data_venda` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Despejando dados para a tabela `atn_vendas`
+-- Extraindo dados da tabela `atn_vendas`
 --
 
 INSERT INTO `atn_vendas` (`id_venda`, `valor_venda`, `prod_venda`, `quant_venda`, `data_venda`) VALUES
-(9, '3.7', 'Medicamento', '1', '18 / 09'),
-(10, '7.4', 'Medicamento', '2', '15 / 07'),
-(11, '7.4', 'Medicamento', '2', '16 / 08'),
-(12, '3.7', 'Medicamento', '1', '12 / 09'),
-(13, '14.8', 'Medicamento', '4', '12 / 08'),
-(14, '14.8', 'Medicamento', '4', '18 / 09'),
-(15, '1950.0', 'Vacina', '5', '19 / 9'),
-(16, '5.8', 'Vermifugo', '2', '19/09'),
-(17, '3.7', 'Medicamento', '1', '18 / 09'),
-(18, '780.0', 'Vacina', '2', '18 / 09'),
-(19, '7.4', 'Medicamento', '2', '19 /8'),
-(20, '25.900000000000002', 'Medicamento', '7', '18 / 08'),
-(21, '11.100000000000001', 'Medicamento', '3', '17 /09'),
-(22, '11.100000000000001', 'Medicamento', '3', '17 / 08'),
-(23, '18.5', 'Medicamento', '5', '13 / 07');
+(1, '160.0', 'Ração Comum', '2', '02/12/22');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `vet_ficha`
+-- Estrutura da tabela `vet_ficha`
 --
 
 CREATE TABLE `vet_ficha` (
@@ -348,111 +300,108 @@ CREATE TABLE `vet_ficha` (
   `categoria_ficha` varchar(100) NOT NULL,
   `descricao_ficha` varchar(100) NOT NULL,
   `prescricao_ficha` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Despejando dados para a tabela `vet_ficha`
+-- Extraindo dados da tabela `vet_ficha`
 --
 
 INSERT INTO `vet_ficha` (`id_ficha`, `nome_ficha`, `idade_ficha`, `sexo_ficha`, `categoria_ficha`, `descricao_ficha`, `prescricao_ficha`) VALUES
-(1, 'Mel', '12', 'Femea', 'Cao', 'Cega', 'Diabete.'),
-(2, 'Maricota', '5', 'Macho', 'Gatinho', 'Gato Bravo', 'Hipertenso'),
-(3, 'Maricota', '5', 'Macho', 'Gatinho', 'Gato Bravo', 'Cardíaco.'),
-(4, 'Maricota', '5', 'Macho', 'Gatinho', 'Gato Bravo', 'Pressão alta.');
+(1, 'Moon', '7', 'Fêmea', 'Furão', 'Nenhuma', 'Animal apresentou problemas com a visão, favor marcar exame imediatamente.');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices de tabela `adm_cargo`
+-- Índices para tabela `adm_cargo`
 --
 ALTER TABLE `adm_cargo`
   ADD PRIMARY KEY (`id_cargo`);
 
 --
--- Índices de tabela `adm_control`
+-- Índices para tabela `adm_control`
 --
 ALTER TABLE `adm_control`
   ADD PRIMARY KEY (`id_control`);
 
 --
--- Índices de tabela `adm_est`
+-- Índices para tabela `adm_est`
 --
 ALTER TABLE `adm_est`
   ADD PRIMARY KEY (`id_est`);
 
 --
--- Índices de tabela `adm_estsaida`
+-- Índices para tabela `adm_estsaida`
 --
 ALTER TABLE `adm_estsaida`
   ADD PRIMARY KEY (`id_est`);
 
 --
--- Índices de tabela `adm_fornecedor`
+-- Índices para tabela `adm_fornecedor`
 --
 ALTER TABLE `adm_fornecedor`
   ADD PRIMARY KEY (`id_fornecedor`);
 
 --
--- Índices de tabela `adm_produto`
+-- Índices para tabela `adm_produto`
 --
 ALTER TABLE `adm_produto`
   ADD PRIMARY KEY (`id_produto`),
   ADD KEY `fk_fornecedor` (`fk_fornecedor`);
 
 --
--- Índices de tabela `adm_servico`
+-- Índices para tabela `adm_servico`
 --
 ALTER TABLE `adm_servico`
   ADD PRIMARY KEY (`id_servico`);
 
 --
--- Índices de tabela `adm_usuario`
+-- Índices para tabela `adm_usuario`
 --
 ALTER TABLE `adm_usuario`
   ADD PRIMARY KEY (`id_usuario`);
 
 --
--- Índices de tabela `atn_agenda`
+-- Índices para tabela `atn_agenda`
 --
 ALTER TABLE `atn_agenda`
   ADD PRIMARY KEY (`id_agenda`),
   ADD KEY `fk_animal` (`fk_animal`);
 
 --
--- Índices de tabela `atn_animal`
+-- Índices para tabela `atn_animal`
 --
 ALTER TABLE `atn_animal`
   ADD PRIMARY KEY (`id_animal`),
   ADD KEY `fk_cliente` (`fk_cliente`);
 
 --
--- Índices de tabela `atn_categoria`
+-- Índices para tabela `atn_categoria`
 --
 ALTER TABLE `atn_categoria`
   ADD PRIMARY KEY (`id_categoria`);
 
 --
--- Índices de tabela `atn_cliente`
+-- Índices para tabela `atn_cliente`
 --
 ALTER TABLE `atn_cliente`
   ADD PRIMARY KEY (`id_cliente`);
 
 --
--- Índices de tabela `atn_vendas`
+-- Índices para tabela `atn_vendas`
 --
 ALTER TABLE `atn_vendas`
   ADD PRIMARY KEY (`id_venda`);
 
 --
--- Índices de tabela `vet_ficha`
+-- Índices para tabela `vet_ficha`
 --
 ALTER TABLE `vet_ficha`
   ADD PRIMARY KEY (`id_ficha`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
@@ -465,7 +414,7 @@ ALTER TABLE `adm_cargo`
 -- AUTO_INCREMENT de tabela `adm_control`
 --
 ALTER TABLE `adm_control`
-  MODIFY `id_control` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_control` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `adm_est`
@@ -477,13 +426,13 @@ ALTER TABLE `adm_est`
 -- AUTO_INCREMENT de tabela `adm_estsaida`
 --
 ALTER TABLE `adm_estsaida`
-  MODIFY `id_est` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_est` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de tabela `adm_fornecedor`
 --
 ALTER TABLE `adm_fornecedor`
-  MODIFY `id_fornecedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_fornecedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `adm_produto`
@@ -501,19 +450,19 @@ ALTER TABLE `adm_servico`
 -- AUTO_INCREMENT de tabela `adm_usuario`
 --
 ALTER TABLE `adm_usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `atn_agenda`
 --
 ALTER TABLE `atn_agenda`
-  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `atn_animal`
 --
 ALTER TABLE `atn_animal`
-  MODIFY `id_animal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_animal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `atn_categoria`
@@ -525,38 +474,38 @@ ALTER TABLE `atn_categoria`
 -- AUTO_INCREMENT de tabela `atn_cliente`
 --
 ALTER TABLE `atn_cliente`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `atn_vendas`
 --
 ALTER TABLE `atn_vendas`
-  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de tabela `vet_ficha`
 --
 ALTER TABLE `vet_ficha`
-  MODIFY `id_ficha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_ficha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- Restrições para tabelas despejadas
+-- Restrições para despejos de tabelas
 --
 
 --
--- Restrições para tabelas `adm_produto`
+-- Limitadores para a tabela `adm_produto`
 --
 ALTER TABLE `adm_produto`
   ADD CONSTRAINT `fk_fornecedor` FOREIGN KEY (`fk_fornecedor`) REFERENCES `adm_fornecedor` (`id_fornecedor`);
 
 --
--- Restrições para tabelas `atn_agenda`
+-- Limitadores para a tabela `atn_agenda`
 --
 ALTER TABLE `atn_agenda`
   ADD CONSTRAINT `fk_animal` FOREIGN KEY (`fk_animal`) REFERENCES `atn_animal` (`id_animal`);
 
 --
--- Restrições para tabelas `atn_animal`
+-- Limitadores para a tabela `atn_animal`
 --
 ALTER TABLE `atn_animal`
   ADD CONSTRAINT `fk_cliente` FOREIGN KEY (`fk_cliente`) REFERENCES `atn_cliente` (`id_cliente`);
