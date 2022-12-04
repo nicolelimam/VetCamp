@@ -105,7 +105,7 @@ public class vet_telaprincipalVIEW extends javax.swing.JFrame {
 
         panelFicha.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 340, 190));
 
-        btnFinalizar.setBackground(new java.awt.Color(147, 112, 219));
+        btnFinalizar.setBackground(new java.awt.Color(153, 153, 153));
         btnFinalizar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         btnFinalizar.setForeground(new java.awt.Color(255, 255, 255));
         btnFinalizar.setText("Finalizar");

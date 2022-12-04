@@ -53,7 +53,7 @@ public class adm_fincontrolecaixaVIEW extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 920, 360));
 
-        btninserirProdutos.setBackground(new java.awt.Color(0, 206, 209));
+        btninserirProdutos.setBackground(new java.awt.Color(50, 205, 50));
         btninserirProdutos.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
         btninserirProdutos.setForeground(new java.awt.Color(255, 255, 255));
         btninserirProdutos.setText("Inserir Contas");

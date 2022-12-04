@@ -89,7 +89,7 @@ public class adm_fincontrolecaixawndVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 120, 90, 30));
 
-        btnAdd.setBackground(new java.awt.Color(0, 206, 209));
+        btnAdd.setBackground(new java.awt.Color(50, 205, 50));
         btnAdd.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         btnAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdd.setText("Adicionar");

@@ -91,7 +91,7 @@ public class adm_estprodutoVIEW extends javax.swing.JFrame {
         jLabel_Entrada.setText("Estoque");
         getContentPane().add(jLabel_Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
-        btnProd.setBackground(new java.awt.Color(0, 206, 209));
+        btnProd.setBackground(new java.awt.Color(50, 205, 50));
         btnProd.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
         btnProd.setForeground(new java.awt.Color(255, 255, 255));
         btnProd.setText("Adicionar Prod.");

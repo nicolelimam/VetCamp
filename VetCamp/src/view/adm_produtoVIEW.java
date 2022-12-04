@@ -52,7 +52,7 @@ public class adm_produtoVIEW extends javax.swing.JFrame {
         jLabel_Data.setText("Data:");
         getContentPane().add(jLabel_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
-        btnAdd.setBackground(new java.awt.Color(0, 206, 209));
+        btnAdd.setBackground(new java.awt.Color(50, 205, 50));
         btnAdd.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         btnAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdd.setText("Adicionar");

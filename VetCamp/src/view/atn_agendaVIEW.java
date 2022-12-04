@@ -143,7 +143,7 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
 
         getContentPane().add(jPanel_dados, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 800, 170));
 
-        btnCadastrar.setBackground(new java.awt.Color(147, 112, 219));
+        btnCadastrar.setBackground(new java.awt.Color(50, 205, 50));
         btnCadastrar.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         btnCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrar.setText("Agendar");
@@ -210,6 +210,9 @@ public class atn_agendaVIEW extends javax.swing.JFrame {
         });
         getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 140, 90, 30));
 
+        btnExcluir.setBackground(new java.awt.Color(240, 72, 66));
+        btnExcluir.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        btnExcluir.setForeground(new java.awt.Color(255, 255, 255));
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
